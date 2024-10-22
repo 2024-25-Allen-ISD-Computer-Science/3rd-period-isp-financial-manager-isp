@@ -4,13 +4,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Financial Manager ISP</title>
     <link rel="stylesheet" href="main.css">
+    <style>
+        /* Initially hide the form */
+        #signUp {
+            display: none; /* Hide the form by default */
+            margin-top: 10px;
+        }
+    </style>
     </head>
     <body>
         <div id="opening">
             <div class="heading">
                 <button class="logIn">Log In</button>
-                <button class="signUp">Sign Up</button>
-                <form id="logIn" action="/signup" method="post">
+                <button class="signUpButton">Sign Up</button>
+                <form id="signUpForm" action="/signup" method="post">
                     <h2>Log In</h2>
                     <p>Please enter your information below.</p>
                     <div>
@@ -43,5 +50,20 @@
             <h3 class="subtitle">About this Site</h3>
             <p class="text">Insert information here</p>
         </div>
-    </body>
+        <script>
+            const signUpButton = document.getElementById('signUpButton');
+            const signUpForm = document.getElementById('signUp');
+
+            toggleButton.addEventListener('click', function() {
+            // Check if the form is hidden or visible
+             if (!myForm.classList.contains('show')) {
+            myForm.classList.add('show'); // Show the form with fade effect
+            toggleButton.textContent = "Hide Form"; // Change button text
+            } else {
+            myForm.classList.remove('show'); // Hide the form
+            toggleButton.textContent = "Show Form"; // Change button text
+            }
+        });
+        </script>
+    </body>   
 </html>
