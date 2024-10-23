@@ -1,6 +1,6 @@
 /* # preface for id */
 /* . preface for class */
-#myForm {
+#signUpForm {
     display: none; /* Hide the form by default */
     margin-top: 10px;
     opacity: 0;
