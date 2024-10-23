@@ -51,23 +51,25 @@
             <p class="text">Insert information here</p>
         </div>
         <script>
-            const signUpButton = document.getElementById('signUpButton');
+           const signUpButton = document.querySelector('.signUpButton');
             const signUpForm = document.getElementById('signUp');
 
             signUpButton.addEventListener('click', function() {
-            // Check if the form is hidden or visible
-            if (signUpForm.style.display === 'none' || signUpForm.style.display === '') {
-                signUpForm.classList.add('show'); // Show the form
-                signUpButton.textContent = "Hide Form"; // Change button text
-                setTimeout(() => {
-                    signUpForm.style.display = 'block'; // Ensure display is set after adding class
-                }, 0);
-            } else {
+            if (signUpForm.classList.contains('show')) {
                 signUpForm.classList.remove('show');
-                signUpForm.style.display = 'none'; // Hide the form
                 signUpButton.textContent = "Sign Up"; // Change button text
-            }
-        });
+                // Use setTimeout to allow CSS transition to finish before setting display to none
+                setTimeout(() => {
+                    signUpForm.style.display = 'none';
+                 }, 500); // Match this duration to the CSS transition time
+             } else {
+                signUpForm.style.display = 'block'; // Ensure the form is displayed
+                setTimeout(() => {
+                    signUpForm.classList.add('show'); // Add class to fade in
+                }, 0);
+                signUpButton.textContent = "Hide Form"; // Change button text
+                }
+            });
         </script>
     </body>   
 </html>

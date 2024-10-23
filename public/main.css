@@ -8,6 +8,6 @@
 }
 
 #signUp.show {
-    display: block;
+    display: block; /* Use block to show the form */
     opacity: 1; /* Make it visible with fade effect */
 }
