@@ -17,7 +17,7 @@
             <div class="heading">
                 <button class="logIn">Log In</button>
                 <button class="signUpButton">Sign Up</button>
-                <form id="signUpForm" action="/signup" method="post">
+                <form id="signUp" action="/signup" method="post">
                     <h2>Log In</h2>
                     <p>Please enter your information below.</p>
                     <div>
@@ -52,16 +52,20 @@
         </div>
         <script>
             const signUpButton = document.getElementById('signUpButton');
-            const signUpForm = document.getElementById('signUpForm');
+            const signUpForm = document.getElementById('signUp');
 
             signUpButton.addEventListener('click', function() {
             // Check if the form is hidden or visible
-             if (!signUpForm.classList.contains('show')) {
-            signUpForm.classList.add('show'); // Show the form with fade effect
-            signUpButton.textContent = "Hide Form"; // Change button text
+            if (signUpForm.style.display === 'none' || signUpForm.style.display === '') {
+                signUpForm.classList.add('show'); // Show the form
+                signUpButton.textContent = "Hide Form"; // Change button text
+                setTimeout(() => {
+                    signUpForm.style.display = 'block'; // Ensure display is set after adding class
+                }, 0);
             } else {
-            signUpForm.classList.remove('show'); // Hide the form
-            signUpButton.textContent = "Sign Up"; // Change button text
+                signUpForm.classList.remove('show');
+                signUpForm.style.display = 'none'; // Hide the form
+                signUpButton.textContent = "Sign Up"; // Change button text
             }
         });
         </script>

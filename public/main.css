@@ -1,13 +1,13 @@
 /* # preface for id */
 /* . preface for class */
-#signUpForm {
+#signUp {
     display: none; /* Hide the form by default */
     margin-top: 10px;
     opacity: 0;
     transition: opacity 0.5s ease;
 }
 
-.show {
+#signUp.show {
     display: block;
     opacity: 1; /* Make it visible with fade effect */
 }
