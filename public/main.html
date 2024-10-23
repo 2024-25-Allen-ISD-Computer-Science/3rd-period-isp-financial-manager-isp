@@ -54,14 +54,14 @@
             const signUpButton = document.getElementById('signUpButton');
             const signUpForm = document.getElementById('signUp');
 
-            toggleButton.addEventListener('click', function() {
+            signUpButton.addEventListener('click', function() {
             // Check if the form is hidden or visible
-             if (!myForm.classList.contains('show')) {
-            myForm.classList.add('show'); // Show the form with fade effect
-            toggleButton.textContent = "Hide Form"; // Change button text
+             if (!signUpForm.classList.contains('show')) {
+            signUpForm.classList.add('show'); // Show the form with fade effect
+            signUpButton.textContent = "Hide Form"; // Change button text
             } else {
-            myForm.classList.remove('show'); // Hide the form
-            toggleButton.textContent = "Show Form"; // Change button text
+            signUpForm.classList.remove('show'); // Hide the form
+            signUpButton.textContent = "Show Form"; // Change button text
             }
         });
         </script>
