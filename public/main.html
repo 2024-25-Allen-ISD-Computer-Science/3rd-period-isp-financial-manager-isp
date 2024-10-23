@@ -16,6 +16,17 @@
         <div id="opening">
             <div class="heading">
                 <button class="logIn">Log In</button>
+                <form id="logIn" action="/login" method="post">
+                    <h2>Log In</h2>
+                    <div>
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                </form>
                 <button class="signUpButton">Sign Up</button>
                 <form id="signUp" action="/signup" method="post">
                     <h2>Sign Up</h2>
