@@ -4,13 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Financial Manager ISP</title>
     <link rel="stylesheet" href="main.css">
-    <style>
-        /* Initially hide the form */
-        #signUp {
-            display: none; /* Hide the form by default */
-            margin-top: 10px;
-        }
-    </style>
     </head>
     <body>
         <div id="opening">
@@ -62,44 +55,6 @@
             <h3 class="subtitle">About this Site</h3>
             <p class="text">Insert information here</p>
         </div>
-        <script>
-            const logInButton = document.querySelector('.logInButton');
-            const logInForm = document.getElementById('logIn');
-            const signUpButton = document.querySelector('.signUpButton');
-            const signUpForm = document.getElementById('signUp');
-
-            logInButton.addEventListener('click', function() {
-                if(logInForm.classList.contains('show')) {
-                    logInForm.classList.remove('show');
-                    logInButton.textContent = "Log In";
-                    setTimeout(() => {
-                        logInForm.style.display = 'none';
-                    }, 500 );
-                } else {
-                    logInForm.style.display = 'block';
-                    setTimeout(() => {
-                        logInForm.classList.add('show');
-                    }, 0);
-                    logInButton.textContent = "Hide Form";
-                }
-            });
-
-            signUpButton.addEventListener('click', function() {
-            if (signUpForm.classList.contains('show')) {
-                signUpForm.classList.remove('show');
-                signUpButton.textContent = "Sign Up"; // Change button text
-                // Use setTimeout to allow CSS transition to finish before setting display to none
-                setTimeout(() => {
-                    signUpForm.style.display = 'none';
-                 }, 500); // Match this duration to the CSS transition time
-             } else {
-                signUpForm.style.display = 'block'; // Ensure the form is displayed
-                setTimeout(() => {
-                    signUpForm.classList.add('show'); // Add class to fade in
-                }, 0);
-                signUpButton.textContent = "Hide Form"; // Change button text
-                }
-            });
-        </script>
+        <script src="main.js"></script>
     </body>   
 </html>
