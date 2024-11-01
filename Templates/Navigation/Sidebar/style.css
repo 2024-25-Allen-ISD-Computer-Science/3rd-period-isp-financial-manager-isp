@@ -9,7 +9,7 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #2b0df1;
+    background-color: #0dd6f1;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -25,7 +25,7 @@ body {
   }
   
   .navbar a:hover {
-    color: #f20909;
+    color: #000000;
   }
   
   .navbar .closebtn {
@@ -39,7 +39,7 @@ body {
   .openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color: #2618f1;
+    background-color: #18edf1;
     color: white;
     padding: 10px 15px;
     border: none;
