@@ -3,69 +3,64 @@
     <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Financial Manager ISP</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" type="text/css" href="./main.css">
     </head>
     <body>
-        <div id="opening">
-            <div id="navbar1" class="navbar">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                <button class="logInButton">Log In</button>
-                <form id="logIn" action="/login" method="post">
-                    <h2>Log In</h2>
-                    <div>
-                        <label for="username">Username</label>
-                        <input type="text" id="username" name="username" required>
-                    </div>
-                    <div>
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password" required>
-                    </div>
-                    <button type="submit">Log In</button>
-                </form>
-                <button class="signUpButton">Sign Up</button>
-                <form id="signUp" action="/signup" method="post">
-                    <h2>Sign Up</h2>
-                    <p>Please enter your information below.</p>
-                    <div>
-                        <label for="username">Username</label>
-                        <input type="text" id="username" name="username" required>
-                    </div>
-                    <div>
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div>
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password" required>
-                    </div>
-                    <div>
-                        <label for="confirmPassword">Confirm Password</label>
-                        <input type="confirmPassword" id="confirmPassword" name="confirmPassword" required>
-                    </div>
-                    <button type="submit">Create Account</button>
-                </form>
-            </div>
-            <div id="sidebarOpener">
-                <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>  
-            </div>
-            <div id="mainBox">
-                <h1 class="title">Welcome</h1>
-                <div class="container">
-                    <p> placeholder</p>
-                    <!-- add polygons for animation here-->
+        <div id="navbar1" class="navbar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <button class="logInButton">Log In</button>
+            <form id="logIn" action="/login" method="post">
+                <h2>Log In</h2>
+                <div>
+                    <label for="username1">Username</label>
+                    <input type="text" id="username1" name="username" required>
                 </div>
-                <h2 id="titleInfo"> Financial Literacy ISP</h2>
-                <h2 id="authors">Maci Siratt, Thomas Roney, David Kwon, Joseph Baril</h2>
-            </div>
+                <div>
+                    <label for="password1">Password</label>
+                    <input type="password" id="password1" name="password" required>
+                </div>
+                <button type="submit">Log In</button>
+            </form>
+            <button class="signUpButton">Sign Up</button>
+            <form id="signUp" action="/signup" method="post">
+                <h2>Sign Up</h2>
+                <p>Please enter your information below.</p>
+                <div>
+                    <label for="username2">Username</label>
+                    <input type="text" id="username2" name="username" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="password2">Password</label>
+                    <input type="password" id="password2" name="password" required>
+                </div>
+                <div>
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                <button type="submit">Create Account</button>
+            </form>
         </div>
-        <div id="mainInfo">
-            <h3 class="subtitle">About this Site</h3>
-            <p class="text">This website aims to make managing your finances easily understandable and accessable. This project is currently a work in progess
-                and we will aim to continue to add more features as it continues. This site will eventually be able to track basic financial history, show and
-                manage your income and expenses, and provide financial advice and access to information to improve your financial literacy.
-            </p>
-            <h3 class="subtitle">Contact Us</h3>
-            <p class="text">If you have any questions or would like to provide suggestions on possible features, contact us here: insert email here</p>
+    
+        <button class="openbtn" onclick="openNav()">☰ Menu</button>
+    
+        <div id="mainContent">
+            <h1 class="title">Welcome</h1>
+            <div class="container">
+                <p>placeholder</p>
+            </div>
+            <h2 id="titleInfo">Financial Literacy ISP</h2>
+            <h2 id="authors">Maci Siratt, Thomas Roney, David Kwon, Joseph Baril</h2>
+            
+            <div id="mainInfo">
+                <h3 class="subtitle">About this Site</h3>
+                <p class="text">This website aims to make managing your finances easily understandable and accessible. This project is currently a work in progress and we will aim to continue to add more features as it continues. This site will eventually be able to track basic financial history, show and manage your income and expenses, and provide financial advice and access to information to improve your financial literacy.</p>
+                <h3 class="subtitle">Contact Us</h3>
+                <p class="text">If you have any questions or would like to provide suggestions on possible features, contact us here: insert email here</p>
+            </div>
         </div>
         <script src="main.js"></script>
     </body>   

@@ -1,86 +1,196 @@
 /* # preface for id */
 /* . preface for class */
-#signUp {
-    display: none; /* Hide the form by default */
-    margin-top: 10px;
-    opacity: 0;
-    transition: opacity 0.5s ease;
+:root {
+    /* Modern Financial Color Palette */
+    --primary: #2E4057;     /* Deep blue - primary color */
+    --secondary: #7C9299;   /* Muted blue-gray - secondary color */
+    --accent: #66B2B2;      /* Teal - accent color */
+    --background: #F5F7FA;  /* Light gray-blue - background */
+    --text: #333333;        /* Dark gray - text */
+    --white: #FFFFFF;       /* White - for contrast */
+    --success: #4CAF50;     /* Green - for success states */
+    --error: #FF5252;       /* Red - for error states */
 }
-
-#signUp.show {
-    display: block; /* Use block to show the form */
-    opacity: 1; /* Make it visible with fade effect */
-}
-#logIn {
-    display: none; /* Hide the form by default */
-    margin-top: 10px;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-#logIn.show {
-    display: block; /* Use block to show the form */
-    opacity: 1; /* Make it visible with fade effect */
-}
-
 body {
-    font-family: "Garamond", serif;
-  }
-  
-  .navbar {
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--text);
+}
+.navbar {
     height: 100%;
     width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #0dd6f1;
+    background-color: var(--primary);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-  }
-  
-  .navbar a {
+    box-shadow: 3px 0 10px rgba(0,0,0,0.1);
+}
+.navbar a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #000000;
+    color: var(--white);
     display: block;
     transition: 0.3s;
-  }
-  
-  .navbar a:hover {
-    color: #000000;
-  }
-  
-  .navbar .closebtn {
+}
+.navbar .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-  }
-  
-  .openbtn {
+}
+.openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color: #18edf1;
-    color: white;
-    padding: 10px 15px;
+    background-color: var(--accent);
+    color: var(--white);
+    padding: 12px 20px;
     border: none;
-  }
-  
-  .openbtn:hover {
-    background-color: #f10d0d;
-  }
-  
-  #main {
+    border-radius: 4px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 0;
+    transition: 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.openbtn:hover {
+    background-color: var(--secondary);
+}
+#mainContent {
     transition: margin-left .5s;
-    padding: 16px;
-  }
-  
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidebar {padding-top: 15px;}
-    .sidebar a {font-size: 18px;}
-  }
+    padding: 80px 40px 40px 40px; /* Increased top padding to prevent overlap */
+    margin-left: 0;
+}
+#signUp {
+    display: none; /* Hide the form by default */
+    margin-top: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+#signUp, #logIn {
+    display: none;
+    margin: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#signUp.show, #logIn.show {
+    display: block;
+    opacity: 1;
+}
+
+.logInButton, .signUpButton {
+    margin: 10px 32px;
+    padding: 12px 24px;
+    cursor: pointer;
+    background-color: var(--accent);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    transition: 0.3s;
+    width: calc(100% - 64px);
+}
+
+.logInButton:hover, .signUpButton:hover {
+    background-color: var(--secondary);
+}
+form div {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--white);
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--secondary);
+    border-radius: 4px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 5px rgba(102, 178, 178, 0.3);
+}
+
+.title {
+    color: var(--primary);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#titleInfo {
+    color: var(--secondary);
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+#authors {
+    color: var(--text);
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.subtitle {
+    color: var(--primary);
+    font-size: 1.5em;
+    margin-top: 30px;
+}
+
+.text {
+    line-height: 1.6;
+    color: var(--text);
+}
+
+form button[type="submit"] {
+    background-color: var(--success);
+    color: var(--white);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+form button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+@media screen and (max-height: 450px) {
+    .navbar {
+        padding-top: 15px;
+    }
+    .navbar a {
+        font-size: 18px;
+    }
+}
+
+/* Added container styling */
+.container {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: 20px 0;
+}
