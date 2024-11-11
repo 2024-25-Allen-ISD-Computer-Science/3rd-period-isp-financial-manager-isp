@@ -107,7 +107,8 @@ body {
     background-color: var(--secondary);
 }
 form div {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
+    margin-right: 10px;
 }
 
 label {
