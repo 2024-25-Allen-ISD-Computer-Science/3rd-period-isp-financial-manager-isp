@@ -113,6 +113,7 @@ form div {
 label {
     display: block;
     margin-bottom: 8px;
+    margin-right: 10px;
     color: var(--white);
     font-weight: 500;
 }
