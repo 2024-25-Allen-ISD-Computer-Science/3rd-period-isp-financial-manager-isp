@@ -196,20 +196,3 @@ form button[type="submit"]:hover {
     margin: 20px 0;
 }
 
-/* Added block styling */
-.firstBlock {
-	width: 100px;
-	height: 100px;
-	background-color: green;
-	animation-name: blockOnemoveTwo;
-	animation-duration: 10s;
-	position: relative;
-	animation-iteration-count: 3;
-	float: left;
-}
-
-@keyframes blockOnemoveTwo {
-	0%   {background-color:green; left:0px; top:0px;}
-	50%  {background-color:blue; left:200px; top:0px;}
-	100% {background-color:green; left:0px; top:0px;}
-}
