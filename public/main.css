@@ -2,14 +2,14 @@
 /* . preface for class */
 :root {
     /* Modern Financial Color Palette */
-    --primary: #2E4057;     /* Deep blue - primary color */
-    --secondary: #7C9299;   /* Muted blue-gray - secondary color */
-    --accent: #9DEAEA;      /* Teal - accent color */
-    --background: #F5F7FA;  /* Light gray-blue - background */
-    --text: #333333;        /* Dark gray - text */
-    --white: #FFFFFF;       /* White - for contrast */
-    --success: #4CAF50;     /* Green - for success states */
-    --error: #FF5252;       /* Red - for error states */
+    --primary: #2E4057;     /* Deep blue */
+    --secondary: #7C9299;   /* Muted blue-gray */
+    --accent: #9DEAEA;      /* Teal */
+    --background: #F5F7FA;  /* Light gray-blue */
+    --text: #333333;        /* Dark gray */
+    --white: #FFFFFF;       /* White */
+    --success: #4CAF50;     /* Green */
+    --error: #FF5252;       /* Red */
 }
 body {
     font-family: 'Segoe UI', 'Roboto', sans-serif;
