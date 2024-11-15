@@ -205,6 +205,7 @@ form button[type="submit"]:hover {
 	animation-duration: 10s;
 	position: relative;
 	animation-iteration-count: 3;
+	float: left;
 }
 
 @keyframes blockOnemoveTwo {
