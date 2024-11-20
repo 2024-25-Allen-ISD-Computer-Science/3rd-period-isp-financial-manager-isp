@@ -1,11 +1,107 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Manager Home</title>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <script src="index.js"></script>
-    </body>   
+    <title>FinanceFlow - Smart Money Management</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-animation {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <header class="bg-blue-600 text-white py-4 shadow-md">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <svg class="w-10 h-10 mr-3" fill="white" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 12a1 1 0 11-2 0v-4a1 1 0 112 0v4zm-1-7a1 1 0 100-2 1 1 0 000 2z"/>
+                </svg>
+                <h1 class="text-2xl font-bold">FinanceFlow</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="hover:text-blue-200">Dashboard</a></li>
+                    <li><a href="#" class="hover:text-blue-200">Budgets</a></li>
+                    <li><a href="#" class="hover:text-blue-200">Insights</a></li>
+                    <li><a href="#" class="bg-blue-700 px-4 py-2 rounded hover:bg-blue-800">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 mt-10">
+        <section class="hero-animation text-center">
+            <h2 class="text-4xl font-bold mb-4 text-gray-900">Take Control of Your Finances</h2>
+            <p class="text-xl mb-8 text-gray-600">Smart tracking, powerful insights, financial freedom.</p>
+            <a href="#" class="bg-green-500 text-white px-6 py-3 rounded-full text-lg hover:bg-green-600 transition duration-300 inline-block">Get Started Free</a>
+        </section>
+
+        <section class="mt-16 grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                <svg class="w-12 h-12 text-blue-500 mb-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/>
+                </svg>
+                <h3 class="text-xl font-semibold mb-3">Budget Tracking</h3>
+                <p>Automatically categorize and track your spending in real-time.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                <svg class="w-12 h-12 text-green-500 mb-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3a1 1 0 102 0V8z" clip-rule="evenodd"/>
+                </svg>
+                <h3 class="text-xl font-semibold mb-3">Investment Insights</h3>
+                <p>Gain detailed analysis of your investment portfolio performance.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                <svg class="w-12 h-12 text-purple-500 mb-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                    <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+                </svg>
+                <h3 class="text-xl font-semibold mb-3">Smart Reports</h3>
+                <p>Generate comprehensive financial reports with actionable insights.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 FinanceFlow. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple interactivity demonstration
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                if (!link.classList.contains('login')) {
+                    e.preventDefault();
+                    alert('Feature coming soon!');
+                }
+            });
+        });
+    </script>
+</body>
 </html>
