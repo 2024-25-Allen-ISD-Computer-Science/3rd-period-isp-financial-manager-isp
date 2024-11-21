@@ -195,4 +195,39 @@ form button[type="submit"]:hover {
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     margin: 20px 0;
 }
+/* animation */
+.firstBlock {
+	width: 100px;
+	height: 100px;
+	background-color: green;
+    position: relative;
+	animation-name: blockOnemoveTwo;
+	animation-duration: 3s;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;
+	float: left;
+}
 
+.blockLeft {
+	clear: both;
+}
+
+.stick {
+	position: absolute;
+	top: 380px;
+	left: 208px;
+	animation-name: stuck;
+}
+   
+
+@keyframes blockOnemoveTwo{
+  0%   {background-color:green; left:0px; top:0px;}
+  50%  {background-color:blue; left:200px; top:0px;}
+  100% {background-color:green; left:0px; top:0px;}
+}
+
+@keyframes stuck {
+  0%   {background-color:green; left:208px; top:380px;}
+  50%  {background-color:blue; left:408px; top:380px;}
+  100% {background-color:green; left:208px; top:380px;}
+}
