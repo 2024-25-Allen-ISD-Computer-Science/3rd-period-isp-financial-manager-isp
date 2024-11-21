@@ -200,7 +200,7 @@ form button[type="submit"]:hover {
 	width: 100px;
 	height: 100px;
 	background-color: green;
-    position: relative;
+	position: relative;
 	animation-name: blockOnemoveTwo;
 	animation-duration: 3s;
 	animation-delay: 2s;
@@ -218,7 +218,29 @@ form button[type="submit"]:hover {
 	left: 208px;
 	animation-name: stuck;
 }
+
+.top {
+	position: absolute;
+	top: 81px;
+	left: 104px;
+	animation-name: top;
+}
+
+.invis {
+	width: 100px;
+	height: 100px;
+	position: relative;
+	background-color: white;
+	animation-name: dne;
+}
    
+.below {
+	position: absolute;
+	left: 104px;
+	top: 681px;
+	animation: bottom;
+}
+
 
 @keyframes blockOnemoveTwo{
   0%   {background-color:green; left:0px; top:0px;}
@@ -230,4 +252,16 @@ form button[type="submit"]:hover {
   0%   {background-color:green; left:208px; top:380px;}
   50%  {background-color:blue; left:408px; top:380px;}
   100% {background-color:green; left:208px; top:380px;}
+}
+
+@keyframes top {
+  0%   {background-color:green; left:104px; top:81px;}
+  50%  {background-color:blue; left:304px; top:81px;}
+  100% {background-color:green; left:104px; top:81px;}
+}
+
+@keyframes bottom {
+  0%   {background-color:green; left:104px; top:681px;}
+  50%  {background-color:blue; left:304px; top:681px;}
+  100% {background-color:green; left:104px; top:681px;}
 }
