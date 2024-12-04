@@ -1,22 +1,213 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sidebar test</title>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div id="navbar1" class="navbar">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Tracker</a>
-            <a href="#">Contact Us</a>
-          </div>
-         
-          <div id="main">
-            <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>  
-          </div>
-        <script src="index.js"></script>
-    </body>  
+    <title>About Us - Financial Manager ISP</title>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9fafb;
+            color: #1f2937;
+        }
+
+        header {
+            background-color: #2563eb;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo svg {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #93c5fd;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 3rem 0;
+            background-color: #f3f4f6;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #111827;
+        }
+
+        .hero p {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #4b5563;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 3rem 0;
+        }
+
+        .team-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .team-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .team-card-content {
+            padding: 1.5rem;
+        }
+
+        .team-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-card p {
+            color: #6b7280;
+        }
+
+        footer {
+            background-color: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <svg fill="white" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 12a1 1 0 11-2 0v-4a1 1 0 112 0v4zm-1-7a1 1 0 100-2 1 1 0 000 2z"/>
+                </svg>
+                <h1>Financial Manager ISP</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/team">Team</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Meet Our Team</h1>
+            <p>A group of passionate professionals dedicated to revolutionizing financial technology and providing innovative solutions that empower businesses and individuals to achieve their financial goals.</p>
+        </div>
+    </section>
+
+    <section class="container team-grid">
+        <div class="team-card">
+            <img src="https://via.placeholder.com/300x300" alt="Team Member">
+            <div class="team-card-content">
+                <h3>Thomas Roney</h3>
+                <p>Lead Developer</p>
+            </div>
+        </div>
+        <div class="team-card">
+            <img src="https://via.placeholder.com/300x300" alt="Team Member">
+            <div class="team-card-content">
+                <h3>Maci Siratt</h3>
+                <p>Chief Designer</p>
+            </div>
+        </div>
+        <div class="team-card">
+            <img src="https://via.placeholder.com/300x300" alt="Team Member">
+            <div class="team-card-content">
+                <h3>David Kwon</h3>
+                <p>No idea</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Financial Manager ISP. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
 </html>
