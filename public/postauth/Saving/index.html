@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<!-- Previous head and style content remains the same as other pages -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Savings Guide</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-animation {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- Previous header content remains the same -->
+    <header class="bg-blue-600 text-white py-4 shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <svg class="w-10 h-10 mr-3" fill="white" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 12a1 1 0 11-2 0v-4a1 1 0 112 0v4zm-1-7a1 1 0 100-2 1 1 0 000 2z"/>
+                </svg>
+                <h1 class="text-2xl font-bold">Smart Savings Guide</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="/postauth" class="hover:text-blue-200">Home</a></li>
+                    <li><a href="/postauth/Dashboard" class="hover:text-blue-200">Dashboard</a></li>
+                    <li><a href="/postauth/AboutUs" class="hover:text-blue-200">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 mt-24">
+
+        <section class="hero-animation text-center">
+            <h2 class="text-4xl font-bold mb-4 text-gray-900">Master Your Savings Journey</h2>
+            <p class="text-xl mb-8 text-gray-600">Smart strategies, better habits, financial security.</p>
+            <a href="#calculator" class="bg-green-500 text-white px-6 py-3 rounded-full text-lg hover:bg-green-600 transition duration-300 inline-block">Savings Calculator</a>
+        </section>
+
+        <section class="mt-16 grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                <svg class="w-12 h-12 text-blue-500 mb-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/>
+                </svg>
+                <h3 class="text-xl font-semibold mb-3">50/30/20 Rule</h3>
+                <p>50% for needs</p>
+                <p>30% for wants</p>
+                <p>20% for savings</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                <svg class="w-12 h-12 text-green-500 mb-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3a1 1 0 102 0V8z" clip-rule="evenodd"/>
+                </svg>
+                <h3 class="text-xl font-semibold mb-3">Emergency Fund</h3>
+                <p>Aim for 3-6 months</p>
+                <p>of living expenses</p>
+                <p>in easily accessible savings</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                <svg class="w-12 h-12 text-purple-500 mb-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                    <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+                </svg>
+                <h3 class="text-xl font-semibold mb-3">Savings Goals</h3>
+                <p>Short-term: 1-2 years</p>
+                <p>Mid-term: 2-5 years</p>
+                <p>Long-term: 5+ years</p>
+            </div>
+        </section>
+
+
+        <section id="tips" class="mt-16">
+            <h3 class="text-2xl font-bold mb-6 text-center">Essential Savings Tips</h3>
+            <div id="tipsContainer" class="grid md:grid-cols-2 gap-8">
+            
+            </div>
+        </section>
+
+        <section id="calculator" class="mt-16 bg-white p-8 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold mb-6 text-center">Savings Calculator</h3>
+            <div class="max-w-md mx-auto">
+                <input type="number" id="monthlyIncome" placeholder="Monthly Income" class="w-full mb-4 p-3 border border-gray-300 rounded-lg">
+                <input type="number" id="savingsPercentage" placeholder="Savings Percentage" max="100" class="w-full mb-4 p-3 border border-gray-300 rounded-lg">
+                <button onclick="calculateSavings()" class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300">Calculate</button>
+                <div id="savingsResult" class="mt-6 p-4 bg-gray-50 rounded-lg text-center font-bold">
+                    Your potential monthly savings: $0.00
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Smart Savings Guide</p>
+        </div>
+    </footer>
+
+    <script>
+        // Array of savings tips with titles and descriptions
+        const allTips = [
+            {
+                title: "Automate Your Savings",
+                description: "Set up automatic transfers to your savings account on payday. What you don't see, you won't spend.",
+                color: "blue"
+            },
+            {
+                title: "Track Your Spending",
+                description: "Use budgeting apps or spreadsheets to monitor where your money goes. Identify areas where you can cut back.",
+                color: "green"
+            },
+            {
+                title: "Eliminate High-Interest Debt",
+                description: "Pay off high-interest credit cards and loans first. The interest you save is better than any investment return.",
+                color: "purple"
+            },
+            {
+                title: "Set Clear Goals",
+                description: "Define specific, measurable savings goals with deadlines to stay motivated and track your progress.",
+                color: "red"
+            },
+            {
+                title: "Use the 24-Hour Rule",
+                description: "Wait 24 hours before making any non-essential purchase to avoid impulse buying.",
+                color: "indigo"
+            },
+            {
+                title: "Cook at Home",
+                description: "Prepare meals at home instead of eating out. This can save hundreds of dollars each month.",
+                color: "yellow"
+            },
+            {
+                title: "Energy Efficiency",
+                description: "Invest in energy-efficient appliances and habits to reduce monthly utility bills.",
+                color: "green"
+            },
+            {
+                title: "Maximize Employee Benefits",
+                description: "Take full advantage of employer matching in retirement accounts and other workplace benefits.",
+                color: "blue"
+            },
+            {
+                title: "Use Cash Back Apps",
+                description: "Take advantage of cash back apps and credit card rewards for purchases you're already making.",
+                color: "purple"
+            },
+            {
+                title: "Create Multiple Savings Accounts",
+                description: "Set up separate savings accounts for different goals to better track and manage your progress.",
+                color: "red"
+            },
+            {
+                title: "Review Subscriptions",
+                description: "Regularly audit your subscriptions and cancel ones you don't use frequently.",
+                color: "indigo"
+            },
+            {
+                title: "Build an Emergency Fund First",
+                description: "Prioritize building an emergency fund before focusing on other financial goals.",
+                color: "blue"
+            }
+        ];
+
+        // Function to get random items from array
+        function getRandomItems(arr, count) {
+            const shuffled = [...arr].sort(() => 0.5 - Math.random());
+            return shuffled.slice(0, count);
+        }
+
+        // Function to display random tips
+        function displayRandomTips() {
+            const tipsContainer = document.getElementById('tipsContainer');
+            const selectedTips = getRandomItems(allTips, 4); // Get 4 random tips
+
+            tipsContainer.innerHTML = selectedTips.map(tip => `
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <h4 class="text-xl font-semibold mb-3 text-${tip.color}-600">${tip.title}</h4>
+                    <p>${tip.description}</p>
+                </div>
+            `).join('');
+        }
+
+        // Call the function when the page loads
+        window.addEventListener('load', displayRandomTips);
+
+        //Calculator starts here
+        function calculateSavings() {
+            const income = parseFloat(document.getElementById('monthlyIncome').value) || 0;
+            const percentage = parseFloat(document.getElementById('savingsPercentage').value) || 0;
+            
+            if (percentage > 100) {
+                alert('Percentage cannot be greater than 100');
+                return;
+            }
+            
+            const monthlySavings = (income * (percentage / 100)).toFixed(2);
+            const yearlySavings = (monthlySavings * 12).toFixed(2);
+            
+            document.getElementById('savingsResult').innerHTML = 
+                `Your potential monthly savings: $${monthlySavings}<br>
+                 Yearly savings: $${yearlySavings}`;
+        }
+
+        // Add event listeners for Enter key
+        document.getElementById('monthlyIncome').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                calculateSavings();
+            }
+        });
+
+        document.getElementById('savingsPercentage').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                calculateSavings();
+            }
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
