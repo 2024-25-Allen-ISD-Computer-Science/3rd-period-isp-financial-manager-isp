@@ -198,12 +198,17 @@ form button[type="submit"]:hover {
 
 /*about us styling */
 
-
+*{
+    margin:0px;
+padding:0px;
+box-sizing: border-box;
+font-family: sans-serif;
+}
 
 .containerus {
     
 
-    width:80%;
+    width: 60px;%;
     max-width: 600px;
     margin: 50px auto;
     padding:20px;
