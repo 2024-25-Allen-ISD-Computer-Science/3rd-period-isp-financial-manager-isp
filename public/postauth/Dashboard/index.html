@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Financial Tracker</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -30,13 +31,20 @@
             transition: all 0.3s ease;
         }
 
+        .containerOther {
+            background-color: transparent;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 1550px;
+            transition: all 0.3s ease;
+        }
+
         .container:hover {
             box-shadow: 0 15px 35px rgba(0,0,0,0.15);
         }
 
         h1 {
             text-align: center;
-            color: #2c3e50;
             margin-bottom: 20px;
             font-weight: 300;
         }
@@ -147,8 +155,25 @@
     </style>
 </head>
 <body>
+    <header class="bg-blue-600 text-white py-4 shadow-md fixed w-full top-0 z-50">
+        <div class="containerOther mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <svg class="w-10 h-10 mr-3" fill="white" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 12a1 1 0 11-2 0v-4a1 1 0 112 0v4zm-1-7a1 1 0 100-2 1 1 0 000 2z"/>
+                </svg>
+                <h1 class="text-[#FFFFFF] text-2xl font-bold">Financial Dashboard</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="/postauth" class="hover:text-blue-200">Home</a></li>
+                    <li><a href="/postauth/Saving/" class="hover:text-blue-200">Savings</a></li>
+                    <li><a href="/postauth/AboutUs" class="hover:text-blue-200">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <div class="container">
-        <h1>Financial Tracker</h1>
+        <h1 class="text-[2c3e50]">Financial Tracker</h1>
         
         <div class="input-group">
             <input type="text" id="description" placeholder="Description" required>
