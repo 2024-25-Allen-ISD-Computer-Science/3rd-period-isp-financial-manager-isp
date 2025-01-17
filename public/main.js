@@ -35,7 +35,6 @@ const logInButton = document.querySelector('.logInButton');
                 signUpButton.textContent = "Hide Form";
             }
         });
-
         function openNav() {
             document.getElementById("navbar1").style.width = "250px";
             document.getElementById("mainContent").style.marginLeft = "250px";
