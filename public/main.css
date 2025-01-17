@@ -201,10 +201,7 @@ form button[type="submit"]:hover {
 
 
 .containerus {
-    margin:0px;
-    padding:0px;
-    box-sizing: border-box;
-    font-family: sans-serif;
+    
 
     width:80%;
     max-width: 600px;
