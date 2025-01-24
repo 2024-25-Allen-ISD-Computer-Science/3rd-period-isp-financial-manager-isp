@@ -14,11 +14,14 @@ document.addEventListener('DOMContentLoaded', () => {
         signUpBtn.addEventListener('click', (event) => {
             event.preventDefault(); // Prevent default anchor behavior
             signUpOverlay.style.display = 'flex'; // Show Sign Up overlay
+            logInOverlay.style.display = 'none';
+            
         });
 
         logInBtn.addEventListener('click', (event) => {
             event.preventDefault(); // Prevent default anchor behavior
             logInOverlay.style.display = 'flex'; // Show Log In overlay
+            signUpOverlay.style.display = 'none';
         });
     }
 
@@ -45,21 +48,24 @@ document.addEventListener('DOMContentLoaded', () => {
     signUpForm.addEventListener('submit', (event) => {
         event.preventDefault();
 
-        const username = document.getElementById('signUpUsername').value;
-        const email = document.getElementById('signUpEmail').value;
-        const password = document.getElementById('signUpPassword').value;
-        const confirmPassword = document.getElementById('signUpConfirmPassword').value;
+        const username = document.getElementById('signUser').value;
+        const email = document.getElementById('signEmail').value;
+        const password = document.getElementById('signPass').value;
+        const confirmPassword = document.getElementById('signPassConf').value;
 
-        // Basic validation for password complexity
+        // some absolute slop right here vvvvv
         const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).+$/;
 
         if (password !== confirmPassword) {
-            signUpError.textContent = 'Passwords do not match!';
+            signUpError.textContent = 'Passwords must match.';
+            document.getElementById('signPass').style.border = '2px solid red';
+            document.getElementById('signPassConf').style.border = '2px solid red';
             return;
         }
 
         if (!passwordRegex.test(password)) {
             signUpError.textContent = 'Password must contain at least one number, one special character, and one uppercase letter.';
+            document.getElementById('signPass').style.border = '2px solid red';
             return;
         }
 
@@ -83,31 +89,49 @@ document.addEventListener('DOMContentLoaded', () => {
         if (database[username] && database[username].password === password) {
             logInError.textContent = '';
             alert('Login successful!');
-            logInOverlay.style.display = 'none'; // Close Log In Overlay
+            window.location.replace("postauth/index.html");
         } else {
             logInError.textContent = 'Invalid username or password.';
         }
     });
 
-    // Password visibility toggle for Sign Up form
-    const toggleSignUpPassword = document.getElementById('toggleSignUpPassword');
+    // initial pass field
+    const toggleSignUpPassword = document.getElementById('toggleSignBtn');
     if (toggleSignUpPassword) {
-        toggleSignUpPassword.addEventListener('click', () => {
-            const passwordField = document.getElementById('signUpPassword');
-            const currentType = passwordField.type;
-            passwordField.type = currentType === 'password' ? 'text' : 'password';
-            toggleSignUpPassword.textContent = passwordField.type === 'password' ? 'Show' : 'Hide';
+        toggleSignUpPassword.addEventListener('click', (event) => {
+            console.log('this shit connected bruh');
+            const signUpPassField = document.querySelector('#signPass');
+            if (signUpPassField.type == 'password') {
+                signUpPassField.type = 'text';
+            } else {
+                signUpPassField.type = 'password';
+            }
+        });
+    }
+    
+    // confirm pass field
+    const confirmPassword = document.getElementById('confirmSignBtn');
+    if (confirmPassword) {
+        confirmPassword.addEventListener('click', (event) => {
+            const confirmPasswordField = document.querySelector('#signPassConf');
+            if (confirmPasswordField.type === 'password') {
+                confirmPasswordField.type = 'text';
+            } else {
+                confirmPasswordField.type = 'password';
+            }
         });
     }
 
-    // Password visibility toggle for Log In form
-    const toggleLogInPassword = document.getElementById('toggleLogInPassword');
+    // login pass field
+    const toggleLogInPassword = document.getElementById('loginToggle');
     if (toggleLogInPassword) {
         toggleLogInPassword.addEventListener('click', () => {
-            const passwordField = document.getElementById('logInPassword');
-            const currentType = passwordField.type;
-            passwordField.type = currentType === 'password' ? 'text' : 'password';
-            toggleLogInPassword.textContent = passwordField.type === 'password' ? 'Show' : 'Hide';
+            const passwordField = document.querySelector('#logInPassword');
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+            } else {
+                passwordField.type = 'password';
+            }
         });
     }
 });
