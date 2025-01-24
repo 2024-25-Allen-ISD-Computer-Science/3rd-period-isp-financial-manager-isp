@@ -135,8 +135,8 @@ class Header extends HTMLElement {
                         </ul>
                         </div>
                         <div class="auth-buttons">
-                            <a href="#" class="filled-button">Sign Up</a>
-                            <a href="#">Log In</a>
+                            <a href="#" id="signUpBtn" class="filled-button">Sign Up</a>
+                            <a href="#" id="logInBtn">Log In</a>
                         </div>
                     </div>
                 </div>

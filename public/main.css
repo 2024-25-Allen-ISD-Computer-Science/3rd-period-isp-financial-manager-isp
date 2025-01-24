@@ -197,66 +197,75 @@ form button[type="submit"]:hover {
 }
 
 /*about us styling */
-
-*{
-    margin:0px;
-padding:0px;
-box-sizing: border-box;
-font-family: sans-serif;
+.contact-container{
+    background: #fff;
+    width:800px;
+    max-width:800px;
+    padding:25px 40px 10px 40px;
+    box-shadow:0px 0px 10px rgba(0,0,0,0.1);
 }
 
-.containerus {
-    width: 60px;%;
-    max-width: 600px;
-    margin: 50px auto;
-    padding:20px;
-    background-color: #fff;
-    border-radius:10px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-}
-
-.containerus h1{
+.container .contactus{
+    font-size:35px;
+    font-weight:600;
     text-align:center;
-    margin-bottom: 20px;
-    color:#333;
 }
 
-.contact input,
-.contact textarea{
-    display:block;
+.container form{
+    padding: 30px 0 0 0 0;
+}
+
+.container form .form-row{
+    display: flex;
+    margin: 32px 0;
+}
+
+form .form-row .input-data{
     width:100%;
-    margin-bottom: 10px;
-    padding: 10px;
-    border:none;
-    border-radius: 5px;
-    background-color: #f7f7f7;
-    color:#333;
+    height:40px;
+    margin: 0 20px;
+    position:relative;
 }
 
-.contact input:focus,
-.contact textarea:focus{
-    outline:none;
-    box-shadow: 0 0 5px #333;
+form .form-row .textarea{
+    height:70px;
 }
 
-.contact button{
+.input-data input,
+.textarea textarea{
     display: block;
+    height: 100%;
+    width:100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid rgba(0,0,0,0.12)
+}
+
+.textarea textarea{
+    resize: none;
+    padding-top:10px;
+}
+
+.input-data input:focus ~ label,
+.textarea textarea:focus ~ label{
+    transform: translateY(-20px);
+    color: #3498db;
+    font-size: 14px;
+}
+
+.input-data label{
+    position:absolute;
+    bottom: 10px;
+    font-size:16px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.textarea label{
     width: 100%;
-    padding: 10px;
-    border:none;
-    border-radius: 5px;
-    background-color: #333;
-    color: #fff;
-    cursor: pointer;
-    transition: 0.3s ease;
-
+    bottom:40px;
+    background:#fff;
 }
-
-.contact button:hover{
-    background-color: #555;
-    
-}
-
 
 /* test */
 .center{
