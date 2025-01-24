@@ -1,11 +1,9 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
     background-color: #f4f4f9;
   }
   .container {
-    position: relative;
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -14,7 +12,8 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
   .containerOther {
-    position:relative;
+    margin: 0 auto;
+    position: relative;
     background-color: transparent;
     border-radius: 12px;
     width: 100%;
