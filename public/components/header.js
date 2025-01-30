@@ -1,200 +1,20 @@
-class Header extends HTMLElement {
-    constructor() {
-        super();
+//hi guys hii !!! nathan here heres how this thing sorta kinda works
+
+class Header extends HTMLElement { // <------ this establishes a class called "Header" that inherits all the funny trinkets and baubles of the "HTMLElement" class (basically just steals its features)
+    constructor() { 
+        super(); // constructor function that basically just goes up to the HTMLElement class and steals its lunch money
     }
 
-    connectedCallback() {
-        this.innerHTML = `
-        <style>
-            * {
-                box-sizing: border-box;
-            }
+    connectedCallback() { //ok this is the meat of the component basicaly everything in here will show up as part of it when its rendered on the website
+        const link = document.createElement('link'); // <----- create seperate element for the CSS so its not invading this file and making it hard to read
+        link.rel = 'stylesheet';
+        link.href = 'components/headerStyle.css';
 
-            .title {
-                color: white;
-                margin: 0;
-                font-size: 24px;
-                font-weight: bold;
-                display: inline-block;
-                padding-right: 5vw;
-                margin-right: 15vw;
-                margin-left: 5vw;
-                white-space: nowrap;
-            }
+        this.innerHTML = '';
 
-            .navcontainer {
-                max-width: 100%;
-                margin: 0 auto;
-                padding: 0 15px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                height: 100%;
-                flex-wrap: nowrap;
-                overflow: hidden;
-            }
+        this.appendChild(link); //and then attach the css text
 
-            .navbar {
-                position: fixed;
-                top: 0;
-                height: 12vh;
-                max-height: 75px;
-                z-index: 1000;
-                width: 100%;
-                background-color: rgb(37, 99, 235);
-            }
-
-            .nav-elements {
-                display: flex;
-                align-items: center;
-            }
-
-            .nav-elements ul {
-                display: flex;
-                list-style-type: none;
-                padding: 0;
-                margin: 0;
-                gap: 4vw;
-            }
-
-            .nav-elements ul li {
-                white-space: nowrap;
-            }
-
-            .nav-elements ul a {
-                font-weight: 100;
-                font-size: 20px;
-                color: white;
-                text-decoration: none;
-                white-space: nowrap;
-                overflow: hidden;
-            }
-
-            .nav-elements ul a.active {
-                color: rgb(255, 255, 255);
-                position: relative;
-            }
-
-            .nav-elements ul a.active::after {
-                content: '';
-                position: absolute;
-                bottom: -4px;
-                left: 0;
-                width: 100%;
-                height: 2px;
-                background-color: rgb(255, 255, 255);
-            }
-
-            .auth-buttons {
-                display: flex;
-                gap: 10px;
-                margin-left: 2vw;
-                margin-right: 2vw;
-                white-space: nowrap;
-            }
-
-            .auth-buttons a {
-                padding: 8px 16px;
-                font-size: 14px;
-                font-weight: 600;
-                color: white;
-                text-decoration: none;
-                border: 2px solid white;
-                border-radius: 20px;
-                transition: all 0.3s ease-in-out;
-            }
-
-            .auth-buttons a.filled-button {
-                background-color: white;
-                color: rgb(37, 99, 235); /* Matches navbar color */
-                border: 2px solid white;
-            }
-
-            .auth-buttons a.filled-button:hover {
-                background-color: rgb(37, 99, 235);
-                color: white;
-            }
-
-            .auth-buttons a {
-                color: white;
-                border: 2px solid white;
-            }
-
-            .auth-buttons a:hover {
-                background-color: white;
-                color: rgb(37,99,235);
-            }
-
-            .hamburger {
-                display: none;
-                flex-direction: column;
-                gap: 5px;
-                cursor: pointer;
-                color: white;
-                font-size: 35px;
-                visibility: hidden;
-            }
-
-            @media (max-width: 1024px) {
-                .title {
-                    font-size: 20px;
-                    margin-right: 4vw;
-                    margin-left: 1vw;
-                }
-
-                .nav-elements ul li {
-                    margin-right: 1vmin;
-                }
-
-                .auth-buttons {
-                    gap: 1vw;
-                }
-            }
-
-            @media (max-width: 880px) {
-                .nav-elements {
-                    display: flex;
-                    position: fixed;
-                    top: 10.9vh;
-                    height: 100%;
-                    width: 25%;
-                    background-color: rgb(37, 99, 235);
-                    flex-direction: column;
-                    align-items: flex-start;
-                    padding: 20px;
-                    gap: 20px;
-                    transition: right 0.3s ease-in-out;
-                    z-index: 0;
-                }
-
-                .nav-elements:not(.show) {
-                    right: -100%;
-                }
-
-                .nav-elements.show {
-                    right: 0%;
-                }
-
-                .nav-elements ul {
-                    flex-direction: column;
-                    width: 100%;
-                    gap: 10px;
-                }
-
-                .auth-buttons {
-                    flex-direction: column;
-                    align-items: flex-start;
-                    gap: 10px;
-                    width: 100%;
-                    margin: 0;
-                }
-
-                .hamburger {
-                    display: flex;
-                    visibility: visible;
-                }
-            }
-        </style>
+        this.innerHTML += `
         <header>
             <div class="navbar">
                 <div class="navcontainer">
@@ -217,13 +37,14 @@ class Header extends HTMLElement {
                 </div>
             </div>
         </header>
-        `;
+        `; // ^^^^^ all of this is just plain html not too hard to read i dont think however you will need to go check the CSS to figure out how the device scaling/burger menu stuff works
+        //hint it has to do with the @media(max-width) tags
 
-        const hamburger = this.querySelector('#hamburger');
+        const hamburger = this.querySelector('#hamburger'); //queryselector essentially just finds whatever has the same tag as it in the HTML
         const navElements = this.querySelector('#nav-elements');
 
-        if (hamburger && navElements) {
-            hamburger.addEventListener('click', () => {
+        if (hamburger && navElements) { //check if hamburger and navelements have actually been rendered and exist on the page or else your logic will poo its pants
+            hamburger.addEventListener('click', () => { //basic on element clicked listener event
                 if (navElements.classList.contains('show')) {
                     navElements.classList.remove('show');
                     hamburger.innerHTML = '☰';
@@ -237,14 +58,15 @@ class Header extends HTMLElement {
                         }
                     </style>
                     X
-                    `;
+                    `; // this pops in a little chunk of css to the hamburger to make it bold and stuff and updates it to show an X button instead of the ☰
                 }
-                console.log(navElements.classList);
+                console.log(navElements.classList); //ignore this this was just for debugging
             });
         } else {
-            console.error('IF YOU ARE SEEING THIS EVERYTHING HAS GONE TERRIBLY WRONG........');
+            console.error('IF YOU ARE SEEING THIS EVERYTHING HAS GONE TERRIBLY WRONG........'); // im sure you can figure out what this means
         }
     }
 }
 
-customElements.define('custom-header', Header);
+customElements.define('custom-header', Header); // <----- push out the component so you can use it on pages with the <custom-header></custom-header> tags
+//make sure when youre doing this you set the name of your custom element to something different BTW or else it will clash with this one and you will have diarrhea forever
