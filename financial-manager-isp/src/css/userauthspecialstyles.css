@@ -1,0 +1,13 @@
+.success {
+    color: rgb(16, 231, 59);
+    font-size: 1.8vh;
+    padding-bottom: 5%;
+}
+
+.error {
+    color: red;
+    font-size: 2vh;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 5% 0;
+}

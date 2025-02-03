@@ -11,11 +11,17 @@ const Home = () => {
     const [showLogIn, setShowLogIn] = useState(false);
 
     const signUpClickEvent = () => {
-        setShowSignUp(!showSignUp);
+      if (!showSignUp && showLogIn) {
+        setShowSignUp(!showLogIn);
+      }
+      setShowSignUp(!showSignUp);
     };
 
     const logInClickEvent = () => {
-        setShowLogIn(!showLogIn);
+      if (!showLogIn && showSignUp) {
+        setShowSignUp(!showSignUp);
+      }
+      setShowLogIn(!showLogIn);
     };
 
     return (
