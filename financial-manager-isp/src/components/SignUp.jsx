@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { supabase } from '../lib/supabase.jsx'
 import '../css/userauthspecialstyles.css'
 
 const SignUp = ({closeSignUp}) => {
@@ -38,7 +39,8 @@ const SignUp = ({closeSignUp}) => {
         setSubmitted(false);
     };
 
-    const SubClicked = (e) => {
+
+    const SubClicked = async (e) => {
         e.preventDefault();
         const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).+$/;
 
@@ -65,6 +67,11 @@ const SignUp = ({closeSignUp}) => {
             passField.current.style.border = '2px solid red';
         }
     
+        const { data, error } = await supabase.auth.signUp({email, password});
+        if (error) {
+            errors.push({ id: 'signupfail', message: data });
+        }
+
         if (errors.length > 0) {
             setError(true);
             setErrorMessages(errors);
