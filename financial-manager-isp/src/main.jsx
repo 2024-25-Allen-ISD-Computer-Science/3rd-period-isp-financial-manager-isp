@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
-import Dashboard from "./pages/Dashboard";
+import Dashboard from "./pages/Inner/Dashboard";
 import Home from "./pages/Home";
 import FourZeroFour from "./pages/FourZeroFour";
 
