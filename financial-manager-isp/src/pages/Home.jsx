@@ -1,33 +1,12 @@
-import React, {useState} from 'react';
-import Navbar from '../components/Navbar';
-import Login from '../components/Login';
-import SignUp from '../components/SignUp';
+import React from 'react';
 import '../css/indexstyle.css';
 
 
 const Home = () => {
 
-    const [showSignUp, setShowSignUp] = useState(false);
-    const [showLogIn, setShowLogIn] = useState(false);
-
-    const signUpClickEvent = () => {
-      if (!showSignUp && showLogIn) {
-        setShowSignUp(!showLogIn);
-      }
-      setShowSignUp(!showSignUp);
-    };
-
-    const logInClickEvent = () => {
-      if (!showLogIn && showSignUp) {
-        setShowSignUp(!showSignUp);
-      }
-      setShowLogIn(!showLogIn);
-    };
-
     return (
         <>
           <main>
-          <Navbar signUpClick={signUpClickEvent} logInClick={logInClickEvent} />
             <div id="splash-wrapper">
               <div id="splash">
                 <div id="splashcontainer">
@@ -52,8 +31,6 @@ const Home = () => {
               </div>
             </div>
           </main>
-          {showSignUp && <SignUp closeSignUp={signUpClickEvent}/>}
-          {showLogIn && <Login closeLogIn={logInClickEvent}/>}
         </>
     )
   };

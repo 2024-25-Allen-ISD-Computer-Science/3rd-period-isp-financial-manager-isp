@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { supabase } from '../lib/supabase.jsx'
 import '../css/userauthspecialstyles.css'
 
-const SignUp = ({closeSignUp}) => {
+const SignUp = ({closeSignUp, loginRedirect}) => {
 
     const [username, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -13,6 +13,7 @@ const SignUp = ({closeSignUp}) => {
     const [errorMsgs, setErrorMessages] = useState([]);
     const [showPass, setShowPass] = useState(false);
     const [showConfirmPass, setShowConfirmPass] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const nameField = useRef(null);
     const emailField = useRef(null);
@@ -42,7 +43,7 @@ const SignUp = ({closeSignUp}) => {
 
     const SubClicked = async (e) => {
         e.preventDefault();
-        const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).+$/;
+        setIsSubmitting(true);
 
         nameField.current.style.border = '2px solid #ccc';
         emailField.current.style.border = '2px solid #ccc';
@@ -62,25 +63,54 @@ const SignUp = ({closeSignUp}) => {
             passField.current.style.border = '2px solid red';
             confPassField.current.style.border = '2px solid red';
         }
+        const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).+$/;
         if (!passwordRegex.test(password)) {
             errors.push({ id: 'weakpass', message: 'Password must contain at least one number, special character, and uppercase letter.' });
             passField.current.style.border = '2px solid red';
-        }
-    
-        const { data, error } = await supabase.auth.signUp({email, password});
-        if (error) {
-            errors.push({ id: 'signupfail', message: data });
         }
 
         if (errors.length > 0) {
             setError(true);
             setErrorMessages(errors);
             setSubmitted(false);
-        } else {
-            setError(false);
-            setErrorMessages([]);
-            setSubmitted(true);
+            setIsSubmitting(false);
+            return;
         }
+        
+        const { data, error: signUpError } = await supabase.auth.signUp({ email, password });
+        if (signUpError) {
+            errors.push({ id: 'signupfail', message: signUpError.message });
+            setError(true);
+            setErrorMessages(errors);
+            setSubmitted(false);
+            setIsSubmitting(false);
+            return;
+        }
+
+        const user = data.user;
+        if (user) {
+          const { error: profileError } = await supabase
+            .from('profiles')
+            .insert([{ id: user.id, username: username, email: email, password: password }]);
+    
+          if (profileError) {
+            errors.push({ id: 'profilefail', message: profileError.message });
+            setError(true);
+            setErrorMessages(errors);
+            setSubmitted(false);
+            setIsSubmitting(false);
+            return;
+          }
+        }
+
+        setError(false);
+        setErrorMessages([]);
+        setSubmitted(true);
+
+        setTimeout(() => {
+            setIsSubmitting(false);
+            loginRedirect();
+        }, 1000);
     };
 
     const HellYes = () => {
@@ -151,7 +181,14 @@ const SignUp = ({closeSignUp}) => {
                             {HellYes()}
                             {HellNo()}
                         </div>
-                        <button type="submit" onClick={SubClicked}>Sign Up</button>
+                        <button
+                            className={isSubmitting ? "inactive" : ""}
+                            type="submit" 
+                            onClick={SubClicked} 
+                            disabled={isSubmitting}
+                        >
+                            {isSubmitting ? 'Pending...' : 'Sign Up'}
+                        </button>
                     </form>
                 </div>
             </div>

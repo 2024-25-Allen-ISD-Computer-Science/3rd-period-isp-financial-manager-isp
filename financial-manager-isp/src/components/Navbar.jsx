@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import SignUp from './SignUp';
-import Login from './Login';
 import '../css/navstyle.css';
 
 const Navbar = ({signUpClick, logInClick}) => {
@@ -32,7 +30,7 @@ const Navbar = ({signUpClick, logInClick}) => {
                                 <Link to="/contact">Contact</Link>
                             </li>
                             </ul>
-
+                            
                             <div className="auth-buttons">
                                 <button onClick={signUpClick} className="filled-button">
                                     Sign Up
