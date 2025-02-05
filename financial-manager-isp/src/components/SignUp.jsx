@@ -90,7 +90,7 @@ const SignUp = ({closeSignUp, loginRedirect}) => {
         const user = data.user;
         if (user) {
           const { error: profileError } = await supabase
-            .from('profiles')
+            .from('user_data')
             .insert([{ id: user.id, username: username, email: email, password: password }]);
     
           if (profileError) {
