@@ -126,12 +126,17 @@ footer {
     bottom: 0;
     color: #ffffff; 
     background-color: #1F2937; 
+    position: fixed;
+    width: 100%;
 }
 
 .footerdiv {
     padding-left: 1rem;
     padding-right: 1rem; 
-    text-align: center; 
+    text-align: center;
+    height: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 @media (min-width: 768px) { 
