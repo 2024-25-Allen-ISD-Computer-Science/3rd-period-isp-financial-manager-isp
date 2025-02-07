@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retirement Education Center</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-animation {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <header class="bg-blue-600 text-white py-4 shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <svg class="w-10 h-10 mr-3" fill="white" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 12a1 1 0 11-2 0v-4a1 1 0 112 0v4zm-1-7a1 1 0 100-2 1 1 0 000 2z"/>
+                </svg>
+                <h1 class="text-2xl font-bold">Retirement Education Center</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="/postauth/"" class="hover:text-blue-200">Home</a></li>
+                    <li><a href="/postauth/Dashboard/" class="hover:text-blue-200">Dashboard</a></li>
+                    <li><a href="/postauth/Information/Saving/index.html" class="hover:text-blue-200">Savings</a></li>
+                    <li><a href="/postauth/Information/information.html" class="hover:text-blue-200">Information</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 mt-24">
+        <section class="hero-animation text-center">
+            <h2 class="text-4xl font-bold mb-4 text-gray-900">Understanding Retirement Planning</h2>
+            <p class="text-xl mb-8 text-gray-600">Master the essentials of retirement planning and secure your future</p>
+        </section>
+
+        <section class="mt-16 grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                <svg class="w-12 h-12 text-blue-500 mb-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8s.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582s-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+                </svg>
+                <h3 class="text-xl font-semibold mb-3">Core Concepts</h3>
+                <p class="mb-4">Compound interest, the 4% rule, and fundamental retirement principles</p>
+                <a href="#basics" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Learn More</a>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                <svg class="w-12 h-12 text-green-500 mb-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm2 10a1 1 0 10-2 0v3a1 1 0 102 0v-3zm2-3a1 1 0 011 1v5a1 1 0 11-2 0v-5a1 1 0 011-1zm4-1a1 1 0 10-2 0v7a1 1 0 102 0V8z" clip-rule="evenodd"/>
+                </svg>
+                <h3 class="text-xl font-semibold mb-3">Account Types</h3>
+                <p class="mb-4">Compare 401(k)s, IRAs, and other retirement accounts</p>
+                <a href="#accounts" class="mt-4 inline-block text-green-600 hover:text-green-800">Explore Options</a>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                <svg class="w-12 h-12 text-purple-500 mb-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"/>
+                </svg>
+                <h3 class="text-xl font-semibold mb-3">Planning Tools</h3>
+                <p class="mb-4">Savings benchmarks and investment allocation strategies</p>
+                <a href="#planning" class="mt-4 inline-block text-purple-600 hover:text-purple-800">Start Planning</a>
+            </div>
+        </section>
+
+        <section id="basics" class="mt-16">
+            <h3 class="text-2xl font-bold mb-6 text-center">Core Retirement Concepts</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-4 rounded-lg shadow-md card-hover">
+                    <h4 class="font-semibold text-blue-600 mb-2">Compound Interest</h4>
+                    <p class="text-sm text-gray-600">$10,000 invested at age 25 becomes $149,745 at age 65 (7% return)</p>
+                    <ul class="mt-2 text-sm text-gray-600 space-y-1">
+                        <li>Early investing maximizes growth</li>
+                        <li>Returns earn additional returns</li>
+                        <li>Time is your biggest advantage</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md card-hover">
+                    <h4 class="font-semibold text-green-600 mb-2">The 4% Rule</h4>
+                    <p class="text-sm text-gray-600">Safe withdrawal strategy for 30-year retirement</p>
+                    <ul class="mt-2 text-sm text-gray-600 space-y-1">
+                        <li>Withdraw 4% first year</li>
+                        <li>Adjust for inflation annually</li>
+                        <li>$1M saves = $40K first year</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md card-hover">
+                    <h4 class="font-semibold text-purple-600 mb-2">Income Sources</h4>
+                    <p class="text-sm text-gray-600">Multiple streams for security</p>
+                    <ul class="mt-2 text-sm text-gray-600 space-y-1">
+                        <li>Social Security: $1,827/month avg</li>
+                        <li>Personal savings & investments</li>
+                        <li>Employer pensions if available</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="accounts" class="mt-16">
+            <h2 class="text-3xl font-bold mb-6">Retirement Account Types</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-600">Traditional 401(k)</h3>
+                    <ul class="space-y-2">
+                        <li>2024 Contribution Limit: $23,000</li>
+                        <li>Catch-up Contribution (50+): Additional $7,500</li>
+                        <li>Employer match: Typically 3-6% of salary</li>
+                        <li>Tax-deferred growth</li>
+                        <li>Required Minimum Distributions (RMDs) start at 73</li>
+                        <li>10% early withdrawal penalty before 59½</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4 text-green-600">Traditional IRA</h3>
+                    <ul class="space-y-2">
+                        <li>2024 Contribution Limit: $7,000</li>
+                        <li>Catch-up Contribution (50+): Additional $1,000</li>
+                        <li>Tax-deductible contributions (income limits apply)</li>
+                        <li>Tax-deferred growth</li>
+                        <li>RMDs start at 73</li>
+                        <li>10% early withdrawal penalty before 59½</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4 text-purple-600">Roth IRA</h3>
+                    <ul class="space-y-2">
+                        <li>2024 Contribution Limit: $7,000</li>
+                        <li>Catch-up Contribution (50+): Additional $1,000</li>
+                        <li>Income limits: Phase-out starts at $146,000 (single)</li>
+                        <li>Tax-free growth and qualified withdrawals</li>
+                        <li>No RMDs required</li>
+                        <li>Contributions can be withdrawn penalty-free</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4 text-red-600">SEP IRA</h3>
+                    <ul class="space-y-2">
+                        <li>2024 Contribution Limit: Lesser of $69,000 or 25% of compensation</li>
+                        <li>Ideal for self-employed individuals</li>
+                        <li>Employer contributions only</li>
+                        <li>Tax-deductible contributions</li>
+                        <li>RMDs start at 73</li>
+                        <li>Simple administration</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="planning" class="mt-16">
+            <h2 class="text-3xl font-bold mb-6">Retirement Planning Strategies</h2>
+
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-4">Savings Benchmarks by Age</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full mb-6">
+                        <thead>
+                            <tr class="bg-gray-100">
+                                <th class="p-3 text-left">Age</th>
+                                <th class="p-3 text-left">Savings Goal (× Annual Salary)</th>
+                                <th class="p-3 text-left">Example ($50,000 Salary)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b">
+                                <td class="p-3">30</td>
+                                <td class="p-3">1×</td>
+                                <td class="p-3">$50,000</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="p-3">40</td>
+                                <td class="p-3">3×</td>
+                                <td class="p-3">$150,000</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="p-3">50</td>
+                                <td class="p-3">6×</td>
+                                <td class="p-3">$300,000</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="p-3">60</td>
+                                <td class="p-3">8×</td>
+                                <td class="p-3">$400,000</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3">67</td>
+                                <td class="p-3">10×</td>
+                                <td class="p-3">$500,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="text-xl font-semibold mb-4 mt-8">Investment Allocation Guidelines</h3>
+                <p class="mb-4">A common rule of thumb for asset allocation:</p>
+                <ul class="list-disc pl-6 mb-6">
+                    <li class="mb-2">Subtract your age from 110 to get your stock percentage</li>
+                    <li class="mb-2">Example: At age 40, consider 70% stocks (110-40) and 30% bonds</li>
+                    <li>Adjust based on your risk tolerance and goals</li>
+                </ul>
+
+                <h3 class="text-xl font-semibold mb-4">Social Security Strategy</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-semibold mb-2">Early Filing (Age 62)</h4>
+                        <ul class="list-disc pl-6">
+                            <li>Reduced benefits (up to 30% less)</li>
+                            <li>Makes sense if you need income early</li>
+                            <li>Health concerns or shorter life expectancy</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-2">Delayed Filing (Age 70)</h4>
+                        <ul class="list-disc pl-6">
+                            <li>Increased benefits (up to 32% more)</li>
+                            <li>Good health and family longevity</li>
+                            <li>Can afford to wait</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 NOT Boredom Center</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
