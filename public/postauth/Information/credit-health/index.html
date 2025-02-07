@@ -1,1 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Health Hub</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
+        .hero-animation {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <header class="bg-blue-600 text-white py-4 shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <svg class="w-10 h-10 mr-3" fill="white" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 12a1 1 0 11-2 0v-4a1 1 0 112 0v4zm-1-7a1 1 0 100-2 1 1 0 000 2z"/>
+                </svg>
+                <h1 class="text-2xl font-bold">Credit Health Hub</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="/postauth/" class="hover:text-blue-200">Home</a></li>
+                    <li><a href="/postauth/Dashboard/" class="hover:text-blue-200">Dashboard</a></li>
+                    <li><a href="/postauth/Information/Saving/index.html" class="hover:text-blue-200">Savings</a></li>
+                    <li><a href="/postauth/Information/information.html" class="hover:text-blue-200">Information</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 mt-24">
+        <section class="hero-animation text-center">
+            <h2 class="text-4xl font-bold mb-4 text-gray-900">Help Maintain Good Credit</h2>
+            <p class="text-xl mb-8 text-gray-600">Strategies to get and maintain a good credit score</p>
+        </section>
+
+        <section class="mt-16 grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                <svg class="w-12 h-12 text-blue-500 mb-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8s.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582s-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+                </svg>
+                <h3 class="text-xl font-semibold mb-3">Investment Strategies</h3>
+                <p>Diversify your portfolio with proven investment approaches</p>
+                <a href="/postauth/Information/investments" class="mt-4 inline-block text-blue-600 hover:text-blue-800">Learn More</a>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                <svg class="w-12 h-12 text-green-500 mb-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm2 10a1 1 0 10-2 0v3a1 1 0 102 0v-3zm2-3a1 1 0 011 1v5a1 1 0 11-2 0v-5a1 1 0 011-1zm4-1a1 1 0 10-2 0v7a1 1 0 102 0V8z" clip-rule="evenodd"/>
+                </svg>
+                <h3 class="text-xl font-semibold mb-3">Savings Calculator</h3>
+                <p>Avoid getting close to your credit limit to keep a low score</p>
+                <a href="/postauth/Information/Saving/index.html" class="mt-4 inline-block text-green-600 hover:text-green-800">Calculate Now</a>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                <svg class="w-12 h-12 text-purple-500 mb-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"/>
+                </svg>
+                <h3 class="text-xl font-semibold mb-3">Education Center</h3>
+                <p>Learn about opening credit accounts, keeping up with your payments, and more</p>
+                <a href="/postauth/Information/retirement-planning/education/index.html" class="mt-4 inline-block text-purple-600 hover:text-purple-800">Start Learning</a>
+            </div>
+        </section>
+
+        <section class="mt-16">
+            <h3 class="text-2xl font-bold mb-6 text-center">Key Areas to Focus</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-4 rounded-lg shadow-md card-hover">
+                    <h4 class="font-semibold text-blue-600 mb-2">Pay Your Bills on Time</h4>
+                    <p class="text-sm text-gray-600">Your billing history can make your credit score drop if there are late/unpaid bills</p>
+                    <a href="/postauth/Information/retirement-planning/401k" class="text-sm text-blue-500 hover:text-blue-700">Learn More</a>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md card-hover">
+                    <h4 class="font-semibold text-green-600 mb-2">Show Responsibility</h4>
+                    <p class="text-sm text-gray-600">Do not apply to get new credit unless you need to</p>
+                    <a href="/postauth/Information/retirement-planning/ira" class="text-sm text-green-500 hover:text-green-700">Learn More</a>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md card-hover">
+                    <h4 class="font-semibold text-red-600 mb-2">Maintain Your Credit History</h4>
+                    <p class="text-sm text-gray-600">Your credit score can increase if you have had a longer credit history</p>
+                    <a href="/postauth/Information/retirement-planning/social-security" class="text-sm text-red-500 hover:text-red-700">Learn More</a>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md card-hover">
+                    <h4 class="font-semibold text-purple-600 mb-2">Check Your Credit Score Reports for Errors</h4>
+                    <p class="text-sm text-gray-600">Errors that go unnoticed on your reports can negatively affect your score</p>
+                    <a href="/postauth/Information/retirement-planning/estate" class="text-sm text-purple-500 hover:text-purple-700">Learn More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Credit Health Hub</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
