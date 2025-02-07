@@ -9,7 +9,7 @@ const Layout = () => {
 
   const [showSignUp, setShowSignUp] = useState(false);
   const [showLogIn, setShowLogIn] = useState(false);
-  const [showNavbar, setShowNavbar] = useState(true);
+  const [innerNavbar, setInnerNavbar] = useState(false);
   
   const signUpClickEvent = () => {
     if (!showSignUp && showLogIn) {
@@ -26,21 +26,20 @@ const Layout = () => {
   };
 
   const logInComplete = () => {
-    setShowNavbar(false);
     setShowLogIn(false);
   }
 
   useEffect(() => {
     if (location.pathname.includes("/Inner")) {
-      setShowNavbar(false);
+      setInnerNavbar(true);
     } else {
-      setShowNavbar(true);
+      setInnerNavbar(false);
     }
   }, [location]);
 
   return (
     <>
-      {showNavbar && <Navbar signUpClick={signUpClickEvent} logInClick={logInClickEvent} />}
+      <Navbar inner={innerNavbar} signUpClick={signUpClickEvent} logInClick={logInClickEvent} />
       <Outlet />
       {showSignUp && <SignUp closeSignUp={signUpClickEvent} loginRedirect={logInClickEvent}/>}
       {showLogIn && <Login closeLogIn={logInClickEvent} loginComplete={logInComplete}/>}
