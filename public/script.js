@@ -103,8 +103,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const signUpPassField = document.querySelector('#signPass');
             if (signUpPassField.type == 'password') {
                 signUpPassField.type = 'text';
+                signUpPassField.classList.remove('bi-eye-slash');
+                signUpPassField.classList.add('bi-eye');
             } else {
                 signUpPassField.type = 'password';
+                signUpPassField.classList.remove('bi-eye');
+                signUpPassField.classList.add('bi-eye-slash');
             }
         });
     }
@@ -116,8 +120,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const confirmPasswordField = document.querySelector('#signPassConf');
             if (confirmPasswordField.type === 'password') {
                 confirmPasswordField.type = 'text';
+                confirmPasswordField.classList.remove('bi-eye-slash');
+                confirmPasswordField.classList.add('bi-eye');
             } else {
                 confirmPasswordField.type = 'password';
+                confirmPasswordField.classList.remove('bi-eye');
+                confirmPasswordField.classList.add('bi-eye-slash');
             }
         });
     }
@@ -129,8 +137,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const passwordField = document.querySelector('#logInPassword');
             if (passwordField.type === 'password') {
                 passwordField.type = 'text';
+                toggle.signUpPassword.classList.remove('bi-eye-slash');
+                toggle.signUpPassword.classList.add('bi-eye');
             } else {
                 passwordField.type = 'password';
+                toggle.signUpPassword.classList.remove('bi-eye');
+                toggle.signUpPassword.classList.add('bi-eye-slash');
             }
         });
     }

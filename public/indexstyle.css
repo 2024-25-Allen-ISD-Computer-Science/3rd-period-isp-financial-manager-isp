@@ -68,6 +68,13 @@ header {
     color: rgba(0, 0, 0, 0);
 }
 
+.invoutline {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    font-size: calc(1vw + 1vh);
+    color: rgba(255, 255, 255);
+}
+
 #splashcontainer h1 :not(.outline) {
     font-size: calc(4vw + 4vh);
     padding: 0;
@@ -259,4 +266,12 @@ button:hover {
 .form-group {
     position: relative;
     margin: 10px 0;
+}
+
+.lockitin {
+    color: green;
+}
+
+.lockitin:hover {
+    color: rgb(50,168,70);
 }
