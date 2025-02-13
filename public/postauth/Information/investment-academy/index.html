@@ -1,44 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Investment Strategies</title>
-  <link rel="stylesheet" href="investmentAcademy.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Strategies</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-animation {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <h1>Effective Investment Strategies</h1>
-    <p>Maximize your returns with these proven investment strategies!</p>
-  </header>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <header class="bg-blue-600 text-white py-4 shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <svg class="w-10 h-10 mr-3" fill="white" viewBox="0 0 20 20">
+                    <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8s.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582s-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+                </svg>
+                <h1 class="text-2xl font-bold">Investment Academy</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="/postauth/" class="hover:text-blue-200">Home</a></li>
+                    <li><a href="/postauth/Dashboard/" class="hover:text-blue-200">Dashboard</a></li>
+                    <li><a href="/postauth/Information/Investing/index.html" class="hover:text-blue-200">Resources</a></li>
+                    <li><a href="/postauth/Information/information.html" class="hover:text-blue-200">Information</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <section class="strategy">
-    <h2>1. Diversify Your Portfolio</h2>
-    <p>Investing in a variety of assets—stocks, bonds, real estate, and commodities—can reduce risk and protect your investments against market volatility.</p>
-  </section>
+    <section class="hero-animation text-center pt-24 pb-12 bg-blue-600 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-4">Effective Investment Strategies</h2>
+            <p class="text-xl">Maximize your returns with these proven investment strategies!</p>
+        </div>
+    </section>
 
-  <section class="strategy">
-    <h2>2. Understand Your Risk Tolerance</h2>
-    <p>Before investing, assess your comfort level with risk. Are you willing to accept higher volatility for greater potential returns, or do you prefer more stable, lower-risk investments?</p>
-  </section>
+    <main class="container mx-auto px-4 py-12">
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                <div class="flex items-center mb-4">
+                    <svg class="w-8 h-8 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+                    </svg>
+                    <h2 class="text-2xl font-bold text-blue-600">1. Diversify Your Portfolio</h2>
+                </div>
+                <p class="text-gray-700">Investing in a variety of assets—stocks, bonds, real estate, and commodities—can reduce risk and protect your investments against market volatility.</p>
+            </div>
 
-  <section class="strategy">
-    <h2>3. Invest for the Long Term</h2>
-    <p>Successful investing often requires patience. Long-term investments, such as index funds or real estate, tend to outperform short-term trading strategies.</p>
-  </section>
+            <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                <div class="flex items-center mb-4">
+                    <svg class="w-8 h-8 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"/>
+                    </svg>
+                    <h2 class="text-2xl font-bold text-green-600">2. Understand Your Risk Tolerance</h2>
+                </div>
+                <p class="text-gray-700">Before investing, assess your comfort level with risk. Are you willing to accept higher volatility for greater potential returns, or do you prefer more stable, lower-risk investments?</p>
+            </div>
 
-  <section class="strategy">
-    <h2>4. Dollar-Cost Averaging</h2>
-    <p>This strategy involves investing a fixed amount regularly, regardless of market conditions. It reduces the impact of short-term market fluctuations and can lower your average cost over time.</p>
-  </section>
+            <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                <div class="flex items-center mb-4">
+                    <svg class="w-8 h-8 text-purple-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                        <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"/>
+                    </svg>
+                    <h2 class="text-2xl font-bold text-purple-600">3. Invest for the Long Term</h2>
+                </div>
+                <p class="text-gray-700">Successful investing often requires patience. Long-term investments, such as index funds or real estate, tend to outperform short-term trading strategies.</p>
+            </div>
 
-  <section class="strategy">
-    <h2>5. Keep Emotions in Check</h2>
-    <p>Emotions like fear and greed can lead to impulsive decisions. It's important to stay disciplined, stick to your plan, and avoid reacting to short-term market changes.</p>
-  </section>
+            <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                <div class="flex items-center mb-4">
+                    <svg class="w-8 h-8 text-red-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                    </svg>
+                    <h2 class="text-2xl font-bold text-red-600">4. Dollar-Cost Averaging</h2>
+                </div>
+                <p class="text-gray-700">This strategy involves investing a fixed amount regularly, regardless of market conditions. It reduces the impact of short-term market fluctuations and can lower your average cost over time.</p>
+            </div>
+        </div>
 
-  <footer>
-    <p>&copy; 2025 Investment Strategies</p>
-  </footer>
+        <div class="mt-12 bg-white p-8 rounded-lg shadow-md card-hover">
+            <div class="flex items-center mb-4">
+                <svg class="w-8 h-8 text-gray-700 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                </svg>
+                <h2 class="text-2xl font-bold text-gray-800">5. Keep Emotions in Check</h2>
+            </div>
+            <p class="text-gray-700">Emotions like fear and greed can lead to impulsive decisions. It's important to stay disciplined, stick to your plan, and avoid reacting to short-term market changes.</p>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Investment Strategies</p>
+        </div>
+    </footer>
 </body>
 </html>
