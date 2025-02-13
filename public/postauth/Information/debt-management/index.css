@@ -1,0 +1,440 @@
+header.css {
+    --tw-bg-opacity: 1;
+    background-color: rgb(var(--tw-color-blue-600) / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(var(--tw-color-white) / var(--tw-text-opacity));
+    padding-top: var(--tw-size-4);
+    padding-bottom: var(--tw-size-4);
+    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),
+      0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    position: fixed;
+    width: 100%;
+    top: var(--tw-size-0);
+    z-index: 50;
+  }
+  
+  header.css > div {
+    width: 100%;
+  }
+  
+  @media (min-width: 640px) {
+    header.css > div {
+      max-width: 640px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    header.css > div {
+      max-width: 768px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    header.css > div {
+      max-width: 1024px;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    header.css > div {
+      max-width: 1280px;
+    }
+  }
+  
+  @media (min-width: 1536px) {
+    header.css > div {
+      max-width: 1536px;
+    }
+  }
+  
+  header.css > div {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--tw-size-4);
+    padding-right: var(--tw-size-4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header.css > div > div {
+    display: flex;
+    align-items: center;
+  }
+  
+  header.css > div > div > svg {
+    width: var(--tw-size-10);
+    height: var(--tw-size-10);
+    margin-right: var(--tw-size-3);
+  }
+  
+  header.css > div > div > h1 {
+    font-size: var(--tw-font-size-2xl);
+    line-height: var(--tw-line-height-8);
+    font-weight: var(--tw-font-weight-bold);
+  }
+  
+  header.css > div > nav > ul {
+    display: flex;
+  }
+  
+  header.css > div > nav > ul > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(var(--tw-size-6) * var(--tw-space-x-reverse));
+    margin-left: calc(var(--tw-size-6) * calc(1 - var(--tw-space-x-reverse)));
+  }
+  
+  header.css > div > nav > ul > li > a:hover {
+    --tw-text-opacity: 1;
+    color: rgb(var(--tw-color-blue-200) / var(--tw-text-opacity));
+  }
+  
+  section.css {
+    /* Unknown class .hero-animation */
+    text-align: center;
+    padding-top: var(--tw-size-24);
+    padding-bottom: var(--tw-size-12);
+    --tw-bg-opacity: 1;
+    background-color: rgb(var(--tw-color-blue-600) / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(var(--tw-color-white) / var(--tw-text-opacity));
+  }
+  
+  section.css > div {
+    width: 100%;
+  }
+  
+  @media (min-width: 640px) {
+    section.css > div {
+      max-width: 640px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    section.css > div {
+      max-width: 768px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    section.css > div {
+      max-width: 1024px;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    section.css > div {
+      max-width: 1280px;
+    }
+  }
+  
+  @media (min-width: 1536px) {
+    section.css > div {
+      max-width: 1536px;
+    }
+  }
+  
+  section.css > div {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--tw-size-4);
+    padding-right: var(--tw-size-4);
+  }
+  
+  section.css > div > h2 {
+    font-size: var(--tw-font-size-4xl);
+    line-height: var(--tw-line-height-10);
+    font-weight: var(--tw-font-weight-bold);
+    margin-bottom: var(--tw-size-4);
+  }
+  
+  section.css > div > p {
+    font-size: var(--tw-font-size-xl);
+    line-height: var(--tw-line-height-7);
+  }
+  
+  main.css {
+    width: 100%;
+  }
+  
+  @media (min-width: 640px) {
+    main.css {
+      max-width: 640px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    main.css {
+      max-width: 768px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    main.css {
+      max-width: 1024px;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    main.css {
+      max-width: 1280px;
+    }
+  }
+  
+  @media (min-width: 1536px) {
+    main.css {
+      max-width: 1536px;
+    }
+  }
+  
+  main.css {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--tw-size-4);
+    padding-right: var(--tw-size-4);
+    padding-top: var(--tw-size-12);
+    padding-bottom: var(--tw-size-12);
+  }
+  
+  main.css > div.css__unique9 {
+    display: grid;
+  }
+  
+  @media (min-width: 768px) {
+    main.css > div.css__unique9 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  
+  main.css > div.css__unique9 {
+    gap: var(--tw-size-8);
+  }
+  
+  main.css > div > div.css__unique11 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(var(--tw-color-white) / var(--tw-bg-opacity));
+    padding: var(--tw-size-6);
+    border-radius: var(--tw-border-radius-lg);
+    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),
+      0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    /* Unknown class .card-hover */
+  }
+  
+  main.css > div > div > h2.css__unique1 {
+    font-size: var(--tw-font-size-2xl);
+    line-height: var(--tw-line-height-8);
+    font-weight: var(--tw-font-weight-bold);
+    margin-bottom: var(--tw-size-4);
+    --tw-text-opacity: 1;
+    color: rgb(var(--tw-color-blue-600) / var(--tw-text-opacity));
+  }
+  
+  main.css > div > div > p.css__unique13 {
+    margin-bottom: var(--tw-size-4);
+  }
+  
+  main.css > div > div > div.css__unique3 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(var(--tw-color-blue-50) / var(--tw-bg-opacity));
+    padding: var(--tw-size-4);
+    border-radius: var(--tw-border-radius-default);
+  }
+  
+  main.css > div > div > div > p {
+    font-size: var(--tw-font-size-sm);
+    line-height: var(--tw-line-height-5);
+  }
+  
+  main.css > div > div > h2.css__unique2 {
+    font-size: var(--tw-font-size-2xl);
+    line-height: var(--tw-line-height-8);
+    font-weight: var(--tw-font-weight-bold);
+    margin-bottom: var(--tw-size-4);
+    --tw-text-opacity: 1;
+    color: rgb(var(--tw-color-green-600) / var(--tw-text-opacity));
+  }
+  
+  main.css > div > div > div.css__unique4 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(var(--tw-color-green-50) / var(--tw-bg-opacity));
+    padding: var(--tw-size-4);
+    border-radius: var(--tw-border-radius-default);
+  }
+  
+  main.css > div > div > h2.css__unique5 {
+    font-size: var(--tw-font-size-2xl);
+    line-height: var(--tw-line-height-8);
+    font-weight: var(--tw-font-weight-bold);
+    margin-bottom: var(--tw-size-4);
+    --tw-text-opacity: 1;
+    color: rgb(var(--tw-color-purple-600) / var(--tw-text-opacity));
+  }
+  
+  main.css > div > div > div.css__unique6 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(var(--tw-color-purple-50) / var(--tw-bg-opacity));
+    padding: var(--tw-size-4);
+    border-radius: var(--tw-border-radius-default);
+  }
+  
+  main.css > div > div > h2.css__unique7 {
+    font-size: var(--tw-font-size-2xl);
+    line-height: var(--tw-line-height-8);
+    font-weight: var(--tw-font-weight-bold);
+    margin-bottom: var(--tw-size-4);
+    --tw-text-opacity: 1;
+    color: rgb(var(--tw-color-red-600) / var(--tw-text-opacity));
+  }
+  
+  main.css > div > div > div.css__unique8 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(var(--tw-color-red-50) / var(--tw-bg-opacity));
+    padding: var(--tw-size-4);
+    border-radius: var(--tw-border-radius-default);
+  }
+  
+  main.css > div.css__unique10 {
+    margin-top: var(--tw-size-12);
+    --tw-bg-opacity: 1;
+    background-color: rgb(var(--tw-color-white) / var(--tw-bg-opacity));
+    padding: var(--tw-size-8);
+    border-radius: var(--tw-border-radius-lg);
+    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),
+      0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    /* Unknown class .card-hover */
+  }
+  
+  main.css > div > h2 {
+    font-size: var(--tw-font-size-2xl);
+    line-height: var(--tw-line-height-8);
+    font-weight: var(--tw-font-weight-bold);
+    margin-bottom: var(--tw-size-6);
+    --tw-text-opacity: 1;
+    color: rgb(var(--tw-color-gray-800) / var(--tw-text-opacity));
+  }
+  
+  main.css > div > p {
+    margin-bottom: var(--tw-size-4);
+  }
+  
+  main.css > div > div.css__unique12 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(var(--tw-color-gray-50) / var(--tw-bg-opacity));
+    padding: var(--tw-size-4);
+    border-radius: var(--tw-border-radius-default);
+  }
+  
+  main.css > div > div > p.css__unique14 {
+    font-size: var(--tw-font-size-sm);
+    line-height: var(--tw-line-height-5);
+  }
+  
+  main.css > div.css__unique15 {
+    margin-top: var(--tw-size-12);
+    --tw-bg-opacity: 1;
+    background-color: rgb(var(--tw-color-white) / var(--tw-bg-opacity));
+    padding: var(--tw-size-8);
+    border-radius: var(--tw-border-radius-lg);
+    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),
+      0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    /* Unknown class .card-hover */
+  }
+  
+  main.css > div > ul > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(var(--tw-size-4) * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(var(--tw-size-4) * var(--tw-space-y-reverse));
+  }
+  
+  main.css > div > ul {
+    margin-bottom: var(--tw-size-6);
+  }
+  
+  main.css > div > ul > li {
+    display: flex;
+    align-items: center;
+  }
+  
+  main.css > div > ul > li > svg {
+    width: var(--tw-size-6);
+    height: var(--tw-size-6);
+    --tw-text-opacity: 1;
+    color: rgb(var(--tw-color-green-500) / var(--tw-text-opacity));
+    margin-right: var(--tw-size-2);
+  }
+  
+  main.css > div > div.css__unique16 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(var(--tw-color-gray-50) / var(--tw-bg-opacity));
+    padding: var(--tw-size-4);
+    border-radius: var(--tw-border-radius-default);
+  }
+  
+  main.css > div > div > p.css__unique17 {
+    font-size: var(--tw-font-size-sm);
+    line-height: var(--tw-line-height-5);
+  }
+  
+  footer.css {
+    --tw-bg-opacity: 1;
+    background-color: rgb(var(--tw-color-gray-800) / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(var(--tw-color-white) / var(--tw-text-opacity));
+    padding-top: var(--tw-size-8);
+    padding-bottom: var(--tw-size-8);
+    margin-top: var(--tw-size-16);
+  }
+  
+  footer.css > div {
+    width: 100%;
+  }
+  
+  @media (min-width: 640px) {
+    footer.css > div {
+      max-width: 640px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    footer.css > div {
+      max-width: 768px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    footer.css > div {
+      max-width: 1024px;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    footer.css > div {
+      max-width: 1280px;
+    }
+  }
+  
+  @media (min-width: 1536px) {
+    footer.css > div {
+      max-width: 1536px;
+    }
+  }
+  
+  footer.css > div {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--tw-size-4);
+    padding-right: var(--tw-size-4);
+    text-align: center;
+  }
