@@ -1,124 +1,136 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Debt Reduction Strategies</title>
-    <link href="index.css" rel="stylesheet"> <!-- Link to your custom header CSS -->
-    <style>
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero-animation {
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .card-hover {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card-hover:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debt Reduction Strategies</title>
+  <link href="index.css" rel="stylesheet"> <!-- Link to your custom CSS file -->
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .hero-animation {
+      animation: fadeInUp 1s ease-out;
+    }
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
-    <header class="header-css">
-        <div>
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="icon">
-                    <path fill-rule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 12a1 1 0 11-2 0v-4a1 1 0 112 0v4zm-1-7a1 1 0 100-2 1 1 0 000 2z"/>
-                </svg>
-                <h1>Retirement Planning Hub</h1>
-            </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="/postauth/">Home</a></li>
-                    <li><a href="/postauth/Dashboard/">Dashboard</a></li>
-                    <li><a href="/postauth/Information/Saving/index.html">Savings</a></li>
-                    <li><a href="/postauth/Information/information.html">Information</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section class="hero-animation hero-css">
-      <div>
-        <h2>Strategies to Reduce, Pay Off, and Stay Out of Debt</h2>
-        <p>Take control of your finances with these proven strategies and helpful statistics!</p>
+  <header class="bg-blue-600 text-white py-4 shadow-md fixed w-full top-0 z-50">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <div class="flex items-center">
+        <svg class="w-10 h-10 mr-3" fill="white" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 12a1 1 0 11-2 0v-4a1 1 0 112 0v4zm-1-7a1 1 0 100-2 1 1 0 000 2z"/>
+        </svg>
+        <h1 class="text-2xl font-bold">Retirement Planning Hub</h1>
       </div>
-    </section>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="/postauth/" class="hover:text-blue-200">Home</a></li>
+          <li><a href="/postauth/Dashboard/" class="hover:text-blue-200">Dashboard</a></li>
+          <li><a href="/postauth/Information/Saving/index.html" class="hover:text-blue-200">Savings</a></li>
+          <li><a href="/postauth/Information/information.html" class="hover:text-blue-200">Information</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main class="main-css">
-        <div class="card">
-            <div class="card-hover">
-                <h2>1. Pay More Than the Minimum Payment</h2>
-                <p>Paying only the minimum balance on your debt prolongs repayment and increases the amount of interest you'll pay over time. Aim to pay more than the minimum whenever possible.</p>
-                <div>
-                    <p><strong>Statistic:</strong> According to a 2022 report by the Consumer Financial Protection Bureau (CFPB), 44% of credit cardholders only make the minimum payment, leading to years of repayment and much higher interest costs.</p>
-                </div>
-            </div>
+  <section class="hero-animation text-center pt-24 pb-12 bg-blue-600 text-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold mb-4">Strategies to Reduce, Pay Off, and Stay Out of Debt</h2>
+      <p class="text-xl">Take control of your finances with these proven strategies and helpful statistics!</p>
+    </div>
+  </section>
 
-            <div class="card-hover">
-                <h2>2. Use the Debt Snowball Method</h2>
-                <p>This method involves paying off your smallest debts first, while making minimum payments on larger debts. Once a smaller debt is paid off, you move the amount you were paying toward the next smallest debt.</p>
-                <div>
-                    <p><strong>Fact:</strong> This approach can provide a psychological boost and motivation as you see your smaller debts disappearing, leading to a sense of accomplishment.</p>
-                </div>
-            </div>
-
-            <div class="card-hover">
-                <h2>3. Consolidate Your Debt</h2>
-                <p>Consolidating multiple debts into one loan or credit card can simplify your payments and potentially reduce your interest rates. Look for low-interest balance transfer cards or personal loans for consolidation.</p>
-                <div>
-                    <p><strong>Statistic:</strong> A study by NerdWallet found that 38% of Americans with credit card debt have considered consolidation as a way to manage payments.</p>
-                </div>
-            </div>
-
-            <div class="card-hover">
-                <h2>4. Create a Budget and Stick to It</h2>
-                <p>Track your income and expenses to identify areas where you can cut back and allocate more toward paying off your debt. A solid budget helps prioritize debt repayment over unnecessary spending.</p>
-                <div>
-                    <p><strong>Fact:</strong> According to the National Foundation for Credit Counseling, 40% of consumers don't have a written budget, which can lead to financial mismanagement.</p>
-                </div>
-            </div>
+  <main class="container mx-auto px-4 py-12">
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">1. Pay More Than the Minimum Payment</h2>
+        <p class="mb-4">Paying only the minimum balance on your debt prolongs repayment and increases the amount of interest you'll pay over time. Aim to pay more than the minimum whenever possible.</p>
+        <div class="bg-blue-50 p-4 rounded">
+          <p class="text-sm"><strong>Statistic:</strong> According to a 2022 report by the Consumer Financial Protection Bureau (CFPB), 44% of credit cardholders only make the minimum payment, leading to years of repayment and much higher interest costs.</p>
         </div>
+      </div>
 
-        <div class="card card-hover">
-            <h2>5. Avoid New Debt</h2>
-            <p>While paying off existing debt, avoid accumulating more. Use cash or debit cards instead of credit cards, and resist the urge to take on new loans while trying to eliminate existing balances.</p>
-            <div>
-                <p><strong>Statistic:</strong> A 2023 report by the Federal Reserve found that U.S. household debt rose to a record $17 trillion, highlighting the importance of avoiding new debt while paying off current balances.</p>
-            </div>
+      <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+        <h2 class="text-2xl font-bold mb-4 text-green-600">2. Use the Debt Snowball Method</h2>
+        <p class="mb-4">This method involves paying off your smallest debts first, while making minimum payments on larger debts. Once a smaller debt is paid off, you move the amount you were paying toward the next smallest debt.</p>
+        <div class="bg-green-50 p-4 rounded">
+          <p class="text-sm"><strong>Fact:</strong> This approach can provide a psychological boost and motivation as you see your smaller debts disappearing, leading to a sense of accomplishment.</p>
         </div>
+      </div>
 
-        <div class="card card-hover">
-            <h2>How to Stay Out of Debt</h2>
-            <ul>
-                <li>Set up an emergency fund to cover unexpected expenses without relying on credit.</li>
-                <li>Avoid living beyond your means and focus on saving for larger purchases instead of financing them.</li>
-                <li>Pay your bills on time to avoid late fees and damage to your credit score.</li>
-                <li>Build and maintain a healthy credit score to access better loan terms if needed.</li>
-            </ul>
-            <div>
-                <p><strong>Statistic:</strong> A report from Experian shows that nearly 1 in 3 Americans have no emergency savings, which can lead to credit card debt when unexpected expenses arise.</p>
-            </div>
+      <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+        <h2 class="text-2xl font-bold mb-4 text-purple-600">3. Consolidate Your Debt</h2>
+        <p class="mb-4">Consolidating multiple debts into one loan or credit card can simplify your payments and potentially reduce your interest rates. Look for low-interest balance transfer cards or personal loans for consolidation.</p>
+        <div class="bg-purple-50 p-4 rounded">
+          <p class="text-sm"><strong>Statistic:</strong> A study by NerdWallet found that 38% of Americans with credit card debt have considered consolidation as a way to manage payments.</p>
         </div>
-    </main>
+      </div>
 
-    <footer class="footer-css">
-        <div>
-            <p>&copy; 2025 Still bored</p>
+      <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+        <h2 class="text-2xl font-bold mb-4 text-red-600">4. Create a Budget and Stick to It</h2>
+        <p class="mb-4">Track your income and expenses to identify areas where you can cut back and allocate more toward paying off your debt. A solid budget helps prioritize debt repayment over unnecessary spending.</p>
+        <div class="bg-red-50 p-4 rounded">
+          <p class="text-sm"><strong>Fact:</strong> According to the National Foundation for Credit Counseling, 40% of consumers don't have a written budget, which can lead to financial mismanagement.</p>
         </div>
-    </footer>
+      </div>
+    </div>
+
+    <div class="mt-12 bg-white p-8 rounded-lg shadow-md card-hover">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800">5. Avoid New Debt</h2>
+      <p class="mb-4">While paying off existing debt, avoid accumulating more. Use cash or debit cards instead of credit cards, and resist the urge to take on new loans while trying to eliminate existing balances.</p>
+      <div class="bg-gray-50 p-4 rounded">
+        <p class="text-sm"><strong>Statistic:</strong> A 2023 report by the Federal Reserve found that U.S. household debt rose to a record $17 trillion, highlighting the importance of avoiding new debt while paying off current balances.</p>
+      </div>
+    </div>
+
+    <div class="mt-12 bg-white p-8 rounded-lg shadow-md card-hover">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800">How to Stay Out of Debt</h2>
+      <ul class="space-y-4 mb-6">
+        <li class="flex items-center">
+          <svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg> Set up an emergency fund to cover unexpected expenses without relying on credit.
+        </li>
+        <li class="flex items-center">
+          <svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg> Avoid living beyond your means and focus on saving for larger purchases instead of financing them.
+        </li>
+        <li class="flex items-center">
+          <svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg> Pay your bills on time to avoid late fees and damage to your credit score.
+        </li>
+        <li class="flex items-center">
+          <svg class="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg> Build and maintain a healthy credit score to access better loan terms if needed.
+        </li>
+      </ul>
+      <div class="bg-gray-50 p-4 rounded">
+        <p class="text-sm"><strong>Statistic:</strong> A report from Experian shows that nearly 1 in 3 Americans have no emergency savings, which can lead to credit card debt when unexpected expenses arise.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-gray-800 text-white py-8 mt-16">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2025 Still bored</p>
+    </div>
+  </footer>
 </body>
 </html>
