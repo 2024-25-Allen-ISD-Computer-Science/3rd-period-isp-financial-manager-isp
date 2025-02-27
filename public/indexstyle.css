@@ -275,3 +275,18 @@ button:hover {
 .lockitin:hover {
     color: white;
 }
+
+footer {
+    background-color: #1f2937; /* bg-gray-800 */
+    color: white; /* text-white */
+    padding: 2rem 0; /* py-8 */
+    margin-top: 4rem; /* mt-16 */
+}
+
+/* Container Styles */
+footer .container {
+    max-width: 1200px; /* Default container width */
+    margin: 0 auto; /* mx-auto */
+    padding: 0 1rem; /* px-4 */
+    text-align: center; /* text-center */
+}
