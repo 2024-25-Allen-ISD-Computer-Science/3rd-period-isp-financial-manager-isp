@@ -277,16 +277,15 @@ button:hover {
 }
 
 footer {
-    background-color: #1f2937; /* bg-gray-800 */
-    color: white; /* text-white */
-    padding: 2rem 0; /* py-8 */
-    margin-top: 4rem; /* mt-16 */
+    background-color: #1f2937 !important;
+    color: white !important;
+    padding: 2rem 0 !important;
+    margin-top: 4rem !important;
 }
 
-/* Container Styles */
 footer .container {
-    max-width: 1200px; /* Default container width */
-    margin: 0 auto; /* mx-auto */
-    padding: 0 1rem; /* px-4 */
-    text-align: center; /* text-center */
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 1rem !important;
+    text-align: center !important;
 }
