@@ -99,7 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleSignUpPassword = document.getElementById('toggleSignBtn');
     if (toggleSignUpPassword) {
         toggleSignUpPassword.addEventListener('click', (event) => {
-            console.log('this shit connected bruh');
             const signUpPassField = document.querySelector('#signPass');
             if (signUpPassField.type == 'password') {
                 signUpPassField.type = 'text';
@@ -147,3 +146,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+

@@ -1,0 +1,19 @@
+.success {
+    color: rgb(16, 231, 59);
+    font-size: 1.8vh;
+    padding-bottom: 5%;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+    font-size: max(1.5vh, 10px);
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 5% 0;
+    font-weight: bold;
+}
+
+.error li {
+    padding-bottom: 5px;
+}
