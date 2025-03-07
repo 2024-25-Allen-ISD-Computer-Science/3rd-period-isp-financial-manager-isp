@@ -373,7 +373,7 @@ footer .container {
 
 .faq-item h2 {
     font-size: calc(1.25vw + 1.25vh);
-    color: #000; /* Changed the color to black */
+    color: #000;
     margin-bottom: 0.5rem;
 }
 
@@ -383,7 +383,6 @@ footer .container {
     line-height: 1.6;
 }
 
-/* Hero Section */
 .hero {
     text-align: center;
     padding: 3rem 0;
@@ -403,7 +402,6 @@ footer .container {
     color: #4b5563;
 }
 
-/* Adjust for the rest of the website */
 .container {
     max-width: 1200px;
     margin: 0 auto;
