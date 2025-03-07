@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Financial Tracker</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -21,32 +20,86 @@
             line-height: 1.6;
         }
 
+        header {
+            background-color: #2563EB;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 50;
+        }
+
+        .containerOther {
+            margin: 0 auto;
+            padding: 0 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo svg {
+            width: 40px;
+            height: 40px;
+        }
+
+        header h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 12px;
+            margin: 0;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav ul li {
+            list-style: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #b3cde0;
+        }
+
         .container {
             background-color: white;
             border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             width: 100%;
             max-width: 900px;
             padding: 30px;
             transition: all 0.3s ease;
-        }
-
-        .containerOther {
-            background-color: transparent;
-            border-radius: 12px;
-            width: 100%;
-            max-width: 1550px;
-            transition: all 0.3s ease;
+            margin-top: 80px;
         }
 
         .container:hover {
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
         }
 
         h1 {
             text-align: center;
             margin-bottom: 20px;
             font-weight: 300;
+            font-size: 40px;
+            color: #2c3e50;
+        }
+
+        #colorright {
+            color: #FFFFFF;
         }
 
         .input-group {
@@ -96,7 +149,7 @@
             padding: 15px;
             text-align: center;
             width: 45%;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         }
 
         .summary-card.income {
@@ -152,35 +205,34 @@
             border-radius: 8px;
             font-weight: bold;
         }
-        .text-\[2c3e50\] {
-            font-size: 50px; /* Make the font bigger */
+
+        .text-2c3e50 {
+            font-size: 50px;
             font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <header class="bg-blue-600 text-white py-4 shadow-md fixed w-full top-0 z-50">
-        <div class="containerOther mx-auto px-4 flex justify-between items-center">
-            <div class="flex items-center h-full">
+    <header>
+        <div class="containerOther">
+            <div class="logo">
                 <svg class="w-10 h-10" fill="white" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 12a1 1 0 11-2 0v-4a1 1 0 112 0v4zm-1-7a1 1 0 100-2 1 1 0 000 2z"/>
                 </svg>
-                <h1 class="text-white text-2xl font-bold ml-3 my-0">Financial Dashboard</h1>
+                <h1 id="colorright">Financial Dashboard</h1>
             </div>
             <nav>
-                <ul class="flex space-x-6">
-                    
-                    
-                    <li><a href="/postauth/" class="hover:text-blue-200">Home</a></li>
-                    <li><a href="/postauth/Dashboard/" class="hover:text-blue-200">Dashboard</a></li>
-                    <li><a href="/postauth/Information/Saving/index.html" class="hover:text-blue-200">Savings</a></li>
-                    <li><a href="/postauth/Information/information.html" class="hover:text-blue-200">Information</a></li>
+                <ul>
+                    <li><a href="/postauth/">Home</a></li>
+                    <li><a href="/postauth/Dashboard/">Dashboard</a></li>
+                    <li><a href="/postauth/Information/Saving/index.html">Savings</a></li>
+                    <li><a href="/postauth/Information/information.html">Information</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <div class="container">
-        <h1 class="text-[2c3e50]">Financial Tracker</h1>
+        <h1 class="text-2c3e50">Financial Tracker</h1>
         
         <div class="input-group">
             <input type="text" id="description" placeholder="Description" required>
