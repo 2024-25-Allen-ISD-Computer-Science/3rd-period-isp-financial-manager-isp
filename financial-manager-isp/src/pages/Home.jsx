@@ -59,7 +59,7 @@ const Home = () => {
             </div>
 
             <div ref={animate}>
-              <h2>Meet Our Team</h2>
+              <h2>Frequently Asked Questions</h2>
             </div>
 
             <div className="fill-partway imgdesc">
