@@ -1,253 +1,454 @@
 <!DOCTYPE html>
-<!-- Previous head and style content remains the same as other pages -->
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Savings Guide</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <style>
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero-animation {
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .card-hover {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card-hover:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Savings Guide</title>
+  <style>
+    html {
+      scroll-padding-top: 8rem;
+    }
+    
+    body {
+      background-color: #f9fafb; 
+      color: #1f2937; 
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    header {
+      background-color: #2563eb;
+      color: white;
+      padding: 1rem 0;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 50;
+    }
+    .header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+    .logo-svg {
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-right: 0.75rem;
+      fill: white;
+    }
+    .logo-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 0;
+    }
+    nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav a {
+      text-decoration: none;
+      color: white;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #bfdbfe; 
+    }
+    
+    .spacer {
+      height: 8rem; 
+    }
+    
+    main {
+      padding: 0 1rem;
+    }
+    
+    .hero {
+      text-align: center;
+      animation: fadeInUp 1s ease-out;
+    }
+    .hero-title {
+      font-size: 2.25rem; 
+      font-weight: bold;
+      margin-bottom: 1rem; 
+      color: #111827; 
+    }
+    .hero-subtitle {
+      font-size: 1.25rem; 
+      margin-bottom: 2rem; 
+      color: #4b5563; 
+    }
+    .btn-calculator {
+      background-color: #10b981; 
+      color: white;
+      padding: 0.75rem 1.5rem; 
+      border-radius: 9999px; 
+      font-size: 1.125rem; 
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+    .btn-calculator:hover {
+      background-color: #059669;
+    }
+    
+    .cards {
+      margin-top: 4rem; 
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    @media (min-width: 768px) {
+      .cards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .card {
+      background-color: white;
+      padding: 1.5rem; 
+      border-radius: 0.5rem; 
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06); 
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .icon {
+      width: 3rem; 
+      height: 3rem; 
+      margin-bottom: 1rem; 
+    }
+   
+    .blue   { color: #3b82f6; }
+    .green  { color: #10b981; }
+    .purple { color: #8b5cf6; }
+    .blue600   { color: #2563eb; }
+    .green600  { color: #059669; }
+    .purple600 { color: #7c3aed; }
+    .red600    { color: #dc2626; }
+    .indigo600 { color: #4f46e5; }
+    .yellow600 { color: #d97706; }
+    
+    .card-title {
+      font-size: 1.25rem; 
+      font-weight: 600; 
+      margin-bottom: 0.75rem; 
+    }
+    
+    #tips {
+      margin-top: 4rem; 
+    }
+    .tips-title {
+      font-size: 1.5rem; 
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    #tipsContainer {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    @media (min-width: 768px) {
+      #tipsContainer {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    #calculator {
+      margin-top: 4rem; 
+      background-color: white;
+      padding: 2rem; 
+      border-radius: 0.5rem; 
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+    }
+    .calculator-title {
+      font-size: 1.5rem; 
+      font-weight: bold;
+      margin-bottom: 1.5rem; 
+      text-align: center;
+    }
+    .calculator-container {
+      max-width: 28rem; 
+      margin: 0 auto;
+    }
+    input[type="number"] {
+      width: 100%;
+      margin-bottom: 1rem; 
+      padding: 0.75rem; 
+      border: 1px solid #d1d5db; 
+      border-radius: 0.5rem; 
+      box-sizing: border-box;
+    }
+    .calculator-btn {
+      width: 100%;
+      background-color: #2563eb; 
+      color: white;
+      padding: 0.75rem 1.5rem; 
+      border: none;
+      border-radius: 0.5rem; 
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .calculator-btn:hover {
+      background-color: #1d4ed8; 
+    }
+    #savingsResult {
+      margin-top: 1.5rem; 
+      padding: 1rem; 
+      background-color: #f9fafb; 
+      border-radius: 0.5rem; 
+      text-align: center;
+      font-weight: bold;
+    }
+    
+    footer {
+      background-color: #1f2937; 
+      color: white;
+      padding: 2rem 0; 
+      margin-top: 4rem; 
+    }
+    footer .container {
+      text-align: center;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
-    <!-- Previous header content remains the same -->
-    <header class="bg-blue-600 text-white py-4 shadow-md fixed w-full top-0 z-50">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <div class="flex items-center">
-                <svg class="w-10 h-10 mr-3" fill="white" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 12a1 1 0 11-2 0v-4a1 1 0 112 0v4zm-1-7a1 1 0 100-2 1 1 0 000 2z"/>
-                </svg>
-                <h1 class="text-2xl font-bold">Smart Savings Guide</h1>
-            </div>
-            <nav>
-                <ul class="flex space-x-6">
-                    <li><a href="/postauth/" class="hover:text-blue-200">Home</a></li>
-                    <li><a href="/postauth/Dashboard/" class="hover:text-blue-200">Dashboard</a></li>
-                    <li><a href="/postauth/Information/Saving/index.html" class="hover:text-blue-200">Savings</a></li>
-                    <li><a href="/postauth/Information/information.html" class="hover:text-blue-200">Information</a></li>
-
-                </ul>
-            </nav>
+<body>
+  <header>
+    <div class="container header-flex">
+      <div class="logo-container">
+        <svg class="logo-svg" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 12a1 1 0 11-2 0v-4a1 1 0 112 0v4zm-1-7a1 1 0 100-2 1 1 0 000 2z"/>
+        </svg>
+        <h1 class="logo-title">Smart Savings Guide</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/postauth/">Home</a></li>
+          <li><a href="/postauth/Dashboard/">Dashboard</a></li>
+          <li><a href="/postauth/Information/Saving/index.html">Savings</a></li>
+          <li><a href="/postauth/Information/information.html">Information</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="spacer"></div>
+  <main class="container">
+    <section class="hero">
+      <h2 class="hero-title">Master Your Savings Journey</h2>
+      <p class="hero-subtitle">Smart strategies, better habits, financial security.</p>
+      <a href="#calculator" class="btn-calculator">Savings Calculator</a>
+    </section>
+    
+    <section class="cards">
+      <div class="card">
+        <svg class="icon blue" viewBox="0 0 20 20">
+          <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/>
+        </svg>
+        <h3 class="card-title blue600">50/30/20 Rule</h3>
+        <p>50% for needs</p>
+        <p>30% for wants</p>
+        <p>20% for savings</p>
+      </div>
+      <div class="card">
+        <svg class="icon green" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3a1 1 0 102 0V8z" clip-rule="evenodd"/>
+        </svg>
+        <h3 class="card-title green600">Emergency Fund</h3>
+        <p>Aim for 3-6 months</p>
+        <p>of living expenses</p>
+        <p>in easily accessible savings</p>
+      </div>
+      <div class="card">
+        <svg class="icon purple" viewBox="0 0 20 20">
+          <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+          <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+        </svg>
+        <h3 class="card-title purple600">Savings Goals</h3>
+        <p>Short-term: 1-2 years</p>
+        <p>Mid-term: 2-5 years</p>
+        <p>Long-term: 5+ years</p>
+      </div>
+    </section>
+    
+    <section id="tips">
+      <h3 class="tips-title">Essential Savings Tips</h3>
+      <div id="tipsContainer">
+      </div>
+    </section>
+    
+    <section id="calculator">
+      <h3 class="calculator-title">Savings Calculator</h3>
+      <div class="calculator-container">
+        <input type="number" id="monthlyIncome" placeholder="Monthly Income">
+        <input type="number" id="savingsPercentage" placeholder="Savings Percentage" max="100">
+        <button onclick="calculateSavings()" class="calculator-btn">Calculate</button>
+        <div id="savingsResult">
+          Your potential monthly savings: $0.00
         </div>
-    </header>
-
-    <main class="container mx-auto px-4 mt-24">
-
-        <section class="hero-animation text-center">
-            <h2 class="text-4xl font-bold mb-4 text-gray-900">Master Your Savings Journey</h2>
-            <p class="text-xl mb-8 text-gray-600">Smart strategies, better habits, financial security.</p>
-            <a href="#calculator" class="bg-green-500 text-white px-6 py-3 rounded-full text-lg hover:bg-green-600 transition duration-300 inline-block">Savings Calculator</a>
-        </section>
-
-        <section class="mt-16 grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-md card-hover">
-                <svg class="w-12 h-12 text-blue-500 mb-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/>
-                </svg>
-                <h3 class="text-xl font-semibold mb-3">50/30/20 Rule</h3>
-                <p>50% for needs</p>
-                <p>30% for wants</p>
-                <p>20% for savings</p>
-            </div>
-
-            <div class="bg-white p-6 rounded-lg shadow-md card-hover">
-                <svg class="w-12 h-12 text-green-500 mb-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3a1 1 0 102 0V8z" clip-rule="evenodd"/>
-                </svg>
-                <h3 class="text-xl font-semibold mb-3">Emergency Fund</h3>
-                <p>Aim for 3-6 months</p>
-                <p>of living expenses</p>
-                <p>in easily accessible savings</p>
-            </div>
-
-            <div class="bg-white p-6 rounded-lg shadow-md card-hover">
-                <svg class="w-12 h-12 text-purple-500 mb-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
-                    <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
-                </svg>
-                <h3 class="text-xl font-semibold mb-3">Savings Goals</h3>
-                <p>Short-term: 1-2 years</p>
-                <p>Mid-term: 2-5 years</p>
-                <p>Long-term: 5+ years</p>
-            </div>
-        </section>
-
-
-        <section id="tips" class="mt-16">
-            <h3 class="text-2xl font-bold mb-6 text-center">Essential Savings Tips</h3>
-            <div id="tipsContainer" class="grid md:grid-cols-2 gap-8">
-            
-            </div>
-        </section>
-
-        <section id="calculator" class="mt-16 bg-white p-8 rounded-lg shadow-md">
-            <h3 class="text-2xl font-bold mb-6 text-center">Savings Calculator</h3>
-            <div class="max-w-md mx-auto">
-                <input type="number" id="monthlyIncome" placeholder="Monthly Income" class="w-full mb-4 p-3 border border-gray-300 rounded-lg">
-                <input type="number" id="savingsPercentage" placeholder="Savings Percentage" max="100" class="w-full mb-4 p-3 border border-gray-300 rounded-lg">
-                <button onclick="calculateSavings()" class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300">Calculate</button>
-                <div id="savingsResult" class="mt-6 p-4 bg-gray-50 rounded-lg text-center font-bold">
-                    Your potential monthly savings: $0.00
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-gray-800 text-white py-8 mt-16">
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2025 Smart Savings Guide</p>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Smart Savings Guide</p>
+    </div>
+  </footer>
+  
+  <script>
+    // Array of savings tips with titles and descriptions
+    const allTips = [
+      {
+        title: "Automate Your Savings",
+        description: "Set up automatic transfers to your savings account on payday. What you don't see, you won't spend.",
+        color: "blue600"
+      },
+      {
+        title: "Track Your Spending",
+        description: "Use budgeting apps or spreadsheets to monitor where your money goes. Identify areas where you can cut back.",
+        color: "green600"
+      },
+      {
+        title: "Eliminate High-Interest Debt",
+        description: "Pay off high-interest credit cards and loans first. The interest you save is better than any investment return.",
+        color: "purple600"
+      },
+      {
+        title: "Set Clear Goals",
+        description: "Define specific, measurable savings goals with deadlines to stay motivated and track your progress.",
+        color: "red600"
+      },
+      {
+        title: "Use the 24-Hour Rule",
+        description: "Wait 24 hours before making any non-essential purchase to avoid impulse buying.",
+        color: "indigo600"
+      },
+      {
+        title: "Cook at Home",
+        description: "Prepare meals at home instead of eating out. This can save hundreds of dollars each month.",
+        color: "yellow600"
+      },
+      {
+        title: "Energy Efficiency",
+        description: "Invest in energy-efficient appliances and habits to reduce monthly utility bills.",
+        color: "green600"
+      },
+      {
+        title: "Maximize Employee Benefits",
+        description: "Take full advantage of employer matching in retirement accounts and other workplace benefits.",
+        color: "blue600"
+      },
+      {
+        title: "Use Cash Back Apps",
+        description: "Take advantage of cash back apps and credit card rewards for purchases you're already making.",
+        color: "purple600"
+      },
+      {
+        title: "Create Multiple Savings Accounts",
+        description: "Set up separate savings accounts for different goals to better track and manage your progress.",
+        color: "red600"
+      },
+      {
+        title: "Review Subscriptions",
+        description: "Regularly audit your subscriptions and cancel ones you don't use frequently.",
+        color: "indigo600"
+      },
+      {
+        title: "Build an Emergency Fund First",
+        description: "Prioritize building an emergency fund before focusing on other financial goals.",
+        color: "blue600"
+      }
+    ];
+    
+    // Function to get random items from array
+    function getRandomItems(arr, count) {
+      const shuffled = [...arr].sort(() => 0.5 - Math.random());
+      return shuffled.slice(0, count);
+    }
+    
+    // Function to display random tips
+    function displayRandomTips() {
+      const tipsContainer = document.getElementById('tipsContainer');
+      const selectedTips = getRandomItems(allTips, 4); // Get 4 random tips
+    
+      tipsContainer.innerHTML = selectedTips.map(tip => `
+        <div class="card">
+          <h4 class="card-title ${tip.color}">${tip.title}</h4>
+          <p>${tip.description}</p>
         </div>
-    </footer>
-
-    <script>
-        // Array of savings tips with titles and descriptions
-        const allTips = [
-            {
-                title: "Automate Your Savings",
-                description: "Set up automatic transfers to your savings account on payday. What you don't see, you won't spend.",
-                color: "blue"
-            },
-            {
-                title: "Track Your Spending",
-                description: "Use budgeting apps or spreadsheets to monitor where your money goes. Identify areas where you can cut back.",
-                color: "green"
-            },
-            {
-                title: "Eliminate High-Interest Debt",
-                description: "Pay off high-interest credit cards and loans first. The interest you save is better than any investment return.",
-                color: "purple"
-            },
-            {
-                title: "Set Clear Goals",
-                description: "Define specific, measurable savings goals with deadlines to stay motivated and track your progress.",
-                color: "red"
-            },
-            {
-                title: "Use the 24-Hour Rule",
-                description: "Wait 24 hours before making any non-essential purchase to avoid impulse buying.",
-                color: "indigo"
-            },
-            {
-                title: "Cook at Home",
-                description: "Prepare meals at home instead of eating out. This can save hundreds of dollars each month.",
-                color: "yellow"
-            },
-            {
-                title: "Energy Efficiency",
-                description: "Invest in energy-efficient appliances and habits to reduce monthly utility bills.",
-                color: "green"
-            },
-            {
-                title: "Maximize Employee Benefits",
-                description: "Take full advantage of employer matching in retirement accounts and other workplace benefits.",
-                color: "blue"
-            },
-            {
-                title: "Use Cash Back Apps",
-                description: "Take advantage of cash back apps and credit card rewards for purchases you're already making.",
-                color: "purple"
-            },
-            {
-                title: "Create Multiple Savings Accounts",
-                description: "Set up separate savings accounts for different goals to better track and manage your progress.",
-                color: "red"
-            },
-            {
-                title: "Review Subscriptions",
-                description: "Regularly audit your subscriptions and cancel ones you don't use frequently.",
-                color: "indigo"
-            },
-            {
-                title: "Build an Emergency Fund First",
-                description: "Prioritize building an emergency fund before focusing on other financial goals.",
-                color: "blue"
-            }
-        ];
-
-        // Function to get random items from array
-        function getRandomItems(arr, count) {
-            const shuffled = [...arr].sort(() => 0.5 - Math.random());
-            return shuffled.slice(0, count);
-        }
-
-        // Function to display random tips
-        function displayRandomTips() {
-            const tipsContainer = document.getElementById('tipsContainer');
-            const selectedTips = getRandomItems(allTips, 4); // Get 4 random tips
-
-            tipsContainer.innerHTML = selectedTips.map(tip => `
-                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
-                    <h4 class="text-xl font-semibold mb-3 text-${tip.color}-600">${tip.title}</h4>
-                    <p>${tip.description}</p>
-                </div>
-            `).join('');
-        }
-
-        // Call the function when the page loads
-        window.addEventListener('load', displayRandomTips);
-
-        //Calculator starts here
-        function calculateSavings() {
-            const income = parseFloat(document.getElementById('monthlyIncome').value) || 0;
-            const percentage = parseFloat(document.getElementById('savingsPercentage').value) || 0;
-            
-            if (percentage > 100) {
-                alert('Percentage cannot be greater than 100');
-                return;
-            }
-            
-            const monthlySavings = (income * (percentage / 100)).toFixed(2);
-            const yearlySavings = (monthlySavings * 12).toFixed(2);
-            
-            document.getElementById('savingsResult').innerHTML = 
-                `Your potential monthly savings: $${monthlySavings}<br>
-                 Yearly savings: $${yearlySavings}`;
-        }
-
-        // Add event listeners for Enter key
-        document.getElementById('monthlyIncome').addEventListener('keypress', function(event) {
-            if (event.key === 'Enter') {
-                calculateSavings();
-            }
+      `).join('');
+    }
+    
+    // Call the function when the page loads
+    window.addEventListener('load', displayRandomTips);
+    
+    // Calculator function
+    function calculateSavings() {
+      const income = parseFloat(document.getElementById('monthlyIncome').value) || 0;
+      const percentage = parseFloat(document.getElementById('savingsPercentage').value) || 0;
+      
+      if (percentage > 100) {
+        alert('Percentage cannot be greater than 100');
+        return;
+      }
+      
+      const monthlySavings = (income * (percentage / 100)).toFixed(2);
+      const yearlySavings = (monthlySavings * 12).toFixed(2);
+      
+      document.getElementById('savingsResult').innerHTML = 
+        `Your potential monthly savings: $${monthlySavings}<br>
+         Yearly savings: $${yearlySavings}`;
+    }
+    
+    // Add event listeners for Enter key on input fields
+    document.getElementById('monthlyIncome').addEventListener('keypress', function(event) {
+      if (event.key === 'Enter') {
+        calculateSavings();
+      }
+    });
+    
+    document.getElementById('savingsPercentage').addEventListener('keypress', function(event) {
+      if (event.key === 'Enter') {
+        calculateSavings();
+      }
+    });
+    
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
         });
-
-        document.getElementById('savingsPercentage').addEventListener('keypress', function(event) {
-            if (event.key === 'Enter') {
-                calculateSavings();
-            }
-        });
-
-        // Smooth scroll for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+      });
+    });
+  </script>
 </body>
 </html>
