@@ -357,7 +357,6 @@ footer .container {
     margin: 5vh auto;
     padding: 3rem;
     background-color: white;
-<<<<<<< HEAD
     border-radius: 10px;
     box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -424,13 +423,4 @@ footer .container {
     padding: 0 1rem !important;
     text-align: center !important;
 }
-=======
-    display: none;
-    overflow: hidden;
-  }
 
-  .faq{
-
-    
-  }
->>>>>>> 7873edd2fec5af9380450d2bb098d076e4de8adb
