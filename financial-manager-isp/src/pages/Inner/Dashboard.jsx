@@ -16,7 +16,7 @@ const Dashboard = () => {
             console.error('damn they dont wanna give you that user', userError);
             return;
           }
-    
+  
           if (user) {
             const { data, error: profileError } = await supabase
               .from('user_data')
@@ -38,8 +38,12 @@ const Dashboard = () => {
     return (
         <>
             <main>
+              <section className="hero-animation">
+                  <h2>Welcome back, {username ? username : 'user'}</h2>
+                  <p>Smart tracking, powerful insights, financial freedom.</p>
+              </section>
                 <div className="dashboard">
-                    <div className="welcome-card">Welcome back, {username ? username : 'user'}</div>
+                    <div className="welcome-card">Pfffppsoofpf</div>
                     
                     <div className="info-card">
                         <div className="header">Budget Goals</div>
