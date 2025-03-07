@@ -291,3 +291,60 @@ footer .container {
     padding: 0 1rem !important;
     text-align: center !important;
 }
+
+.hero {
+    text-align: center;
+    padding: 3rem 0;
+    background-color: #f3f4f6;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #111827;
+}
+
+.hero p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #4b5563;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 3rem 0;
+}
+
+.team-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+}
+
+.team-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.team-card-content {
+    padding: 1.5rem;
+}
+
+.team-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.team-card p {
+    color: #6b7280;
+}
