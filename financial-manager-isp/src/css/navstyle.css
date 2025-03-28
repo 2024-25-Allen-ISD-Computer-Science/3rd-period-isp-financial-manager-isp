@@ -97,6 +97,9 @@
     border: 2px solid white;
     border-radius: 20px;
     transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
 }
 
 .auth-buttons button.filled-button {
@@ -113,6 +116,8 @@
 .auth-buttons button {
     color: white;
     border: 2px solid white;
+    justify-content: center;
+    text-align: center;
 }
 
 .auth-buttons button:hover {
@@ -128,6 +133,27 @@
     color: white;
     font-size: 35px;
     visibility: hidden;
+}
+
+.profileicon {
+    mask: url(../../public/user.svg) 50% 50% / contain no-repeat;
+}
+
+.settingicon {
+    mask: url(../../public/settings-svgrepo-com.svg) 50% 50% / contain no-repeat;
+}
+
+.btnicon {
+    background-color: currentcolor;
+    aspect-ratio: 20 / 20;
+    height: 20px;
+    width: auto;
+}
+
+.auth-buttons button p {
+    margin: auto;
+    padding: 0;
+    
 }
 
 @media (max-width: 1024px) {

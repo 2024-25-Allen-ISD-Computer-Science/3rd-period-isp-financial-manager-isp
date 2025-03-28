@@ -1,1 +1,0 @@
-This folder is meant to contain and store universal templates/formats that can be for multiple webpages

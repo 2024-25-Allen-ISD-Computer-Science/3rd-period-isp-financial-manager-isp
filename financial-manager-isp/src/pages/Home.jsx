@@ -1,8 +1,35 @@
 import React from 'react';
+import { useRef, useEffect } from 'react';
 import '../css/indexstyle.css';
 
 
 const Home = () => {
+    const animate = useRef(null);
+
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('hero-animation');
+            }
+          });
+        },
+        {
+          threshold: 0.5,
+        }
+      );
+
+      if (animate.current) {
+        observer.observe(animate.current);
+      }
+
+      return () => {
+        if (animate.current) {
+          observer.unobserve(animate.current);
+        }
+      };
+    }, []);
 
     return (
         <>
@@ -30,9 +57,25 @@ const Home = () => {
                 </span>
               </div>
             </div>
+
+            <div ref={animate}>
+              <h2>Frequently Asked Questions</h2>
+            </div>
+
+            <div className="fill-partway imgdesc">
+              <div className="spanholder">
+                <span className="yapping">
+                  Filler text about the team and how hard they work or whatever
+                </span>
+              </div>
+              <div className="spanholder">
+                there is supposed to be a card carousel here but i dont think joe or david figured it out
+              </div>
+            </div>
           </main>
         </>
     )
   };
+  
   
   export default Home;
