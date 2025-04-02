@@ -2,6 +2,33 @@ import React from 'react';
 import { useRef, useEffect } from 'react';
 import '../css/indexstyle.css';
 
+// JavaScript for FAQ Section
+
+document.querySelectorAll(".faq-question").forEach((question) => {
+  question.addEventListener("click", () => {
+      const answer = question.nextElementSibling;
+      const isOpen = answer.style.maxHeight;
+      const toggleSymbol = question.querySelector(".faq-toggle");
+
+      // Close all other open answers
+      document.querySelectorAll(".faq-answer").forEach((otherAnswer) => {
+          if (otherAnswer !== answer) {
+              otherAnswer.style.maxHeight = null;
+              otherAnswer.previousElementSibling.querySelector(".faq-toggle").textContent = "+";
+          }
+      });
+
+      // Toggle the clicked answer
+      if (isOpen) {
+          answer.style.maxHeight = null;
+          toggleSymbol.textContent = "+";
+      } else {
+          answer.style.maxHeight = answer.scrollHeight + "px";
+          toggleSymbol.textContent = "–";
+      }
+  });
+});
+
 
 const Home = () => {
     const animate = useRef(null);
@@ -62,15 +89,90 @@ const Home = () => {
               <h2>Frequently Asked Questions</h2>
             </div>
 
+
+   
+              <div class="faq-container">
+                  <div class="faq-item">
+                      <button class="faq-question" data-index="0">
+                          What is the purpose of this website?
+                          <span class="faq-toggle">+</span>
+                      </button>
+                      <div class="faq-answer">
+                          <p>This website aims to provide an easy-to-use platform for managing finances, especially tailored for younger audiences.</p>
+                      </div>
+                  </div>
+
+                  <div class="faq-item">
+                      <button class="faq-question" data-index="1">
+                          How do I create an account?
+                          <span class="faq-toggle">+</span>
+                      </button>
+                      <div class="faq-answer">
+                          <p>Simply click the Sign Up button and follow the instructions to create a new account.</p>
+                      </div>
+                  </div>
+
+                  <div class="faq-item">
+                      <button class="faq-question" data-index="2">
+                          Is my data secure?
+                          <span class="faq-toggle">+</span>
+                      </button>
+                      <div class="faq-answer">
+                          <p>Yes, we use industry-standard encryption to ensure your data is secure and private.</p>
+                      </div>
+                  </div>
+              </div>
+
+
+
+
+                          <div className="team-carousel-wrapper">
+                <div className="team-carousel">
+                    <div className="carousel-item">
+                        <img src="https://via.placeholder.com/200" alt="David Kwon" />
+                        <div className="carousel-info">
+                            <h3>David Kwon</h3>
+                            <p>Web Developer & Designer</p>
+                        </div>
+                    </div>
+                    <div className="carousel-item">
+                        <img src="https://via.placeholder.com/200" alt="Maci Siratt" />
+                        <div className="carousel-info">
+                            <h3>Maci Siratt</h3>
+                            <p>Project Manager</p>
+                        </div>
+                    </div>
+                    <div className="carousel-item">
+                        <img src="https://via.placeholder.com/200" alt="Thomas Roney" />
+                        <div className="carousel-info">
+                            <h3>Thomas Roney</h3>
+                            <p>Financial Specialist</p>
+                        </div>
+                    </div>
+                    <div className="carousel-item">
+                        <img src="https://via.placeholder.com/200" alt="Joseph Baril" />
+                        <div className="carousel-info">
+                            <h3>Joseph Baril</h3>
+                            <p>Content Creator</p>
+                        </div>
+                    </div>
+                    <div className="carousel-item">
+                        <img src="https://via.placeholder.com/200" alt="Nathan Charles" />
+                        <div className="carousel-info">
+                            <h3>Nathan Charles</h3>
+                            <p>Financial Analyst</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+             
             <div className="fill-partway imgdesc">
-              <div className="spanholder">
-                <span className="yapping">
-                  Filler text about the team and how hard they work or whatever
-                </span>
-              </div>
-              <div className="spanholder">
-                there is supposed to be a card carousel here but i dont think joe or david figured it out
-              </div>
+              
+              
             </div>
           </main>
         </>
