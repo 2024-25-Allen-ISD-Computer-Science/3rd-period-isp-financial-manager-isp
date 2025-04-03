@@ -4,6 +4,22 @@ import '../css/indexstyle.css';
 const Home = () => {
   const animate = useRef(null);
 
+
+  document.querySelectorAll('.scroll-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('data-target');
+        const targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+            window.scrollTo({
+                top: targetSection.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
   // FAQ Toggle Logic inside useEffect
   useEffect(() => {
     const faqQuestions = document.querySelectorAll(".faq-question");
@@ -70,6 +86,7 @@ const Home = () => {
   return (
     <>
       <main>
+      <section id="HOME">
         <div id="splash-wrapper">
           <div id="splash">
             <div id="splashcontainer">
@@ -93,7 +110,9 @@ const Home = () => {
             </span>
           </div>
         </div>
+        </section>
 
+        <section id="FAQ">
         <div ref={animate}>
           <h2>Frequently Asked Questions</h2>
         </div>
@@ -160,6 +179,10 @@ const Home = () => {
           </div>
         </div>
 
+        </section>
+
+
+        <section id="ABOUT">
         <div className="team-carousel-wrapper">
           <div className="team-carousel">
             <div className="carousel-item">
@@ -199,9 +222,11 @@ const Home = () => {
             </div>
           </div>
         </div>
-
+        </section>
         <div className="fill-partway imgdesc"></div>
 
+
+        <section id="CONTACT"></section>
         <footer class="footer">
             <div class="footer-content">
                 <p>@FinancialManager</p>

@@ -11,6 +11,7 @@
 
 html {
     font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -547,10 +548,8 @@ footer .container {
     color: white;
     padding: 20px;
     text-align: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
     width: 100%;
+    margin-top: 50px;
 }
 
 .footer-content {
@@ -562,3 +561,4 @@ footer .container {
     font-size: 1rem;
     margin: 0;
 }
+
