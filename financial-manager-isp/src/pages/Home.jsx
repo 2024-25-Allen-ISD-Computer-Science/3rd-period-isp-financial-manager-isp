@@ -95,7 +95,7 @@ const Home = () => {
             </div>
           </div>
           <div id="splash-image">
-            <img src="https://raw.githubusercontent.com/2024-25-Allen-ISD-Computer-Science/3rd-period-isp-financial-manager-isp/refs/heads/main/public/accessiblefiles/FPXqiSR%20-%20Imgur.gif" />
+            <img height="400" width="800" src="https://raw.githubusercontent.com/2024-25-Allen-ISD-Computer-Science/3rd-period-isp-financial-manager-isp/860e00501860032b2c363b6a567f8c6e3fe7d85f/financial-manager-isp/public/FPXqiSR%20-%20Imgur.gif" />
           </div>
         </div>
 
