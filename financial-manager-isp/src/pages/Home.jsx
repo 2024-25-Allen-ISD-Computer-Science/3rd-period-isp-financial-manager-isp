@@ -180,7 +180,7 @@ const Home = () => {
               <img src="https://via.placeholder.com/200" alt="David Kwon" />
               <div className="carousel-info">
                 <h3>David Kwon</h3>
-                <p>Financial Specialist</p>
+                <p>Front-End Developer</p>
               </div>
             </div>
               <div className="carousel-item">
