@@ -160,6 +160,10 @@ const Home = () => {
           </div>
         </div>
 
+        <div ref={animate}>
+          <h2>Meet The Team</h2>
+        </div>
+
         <div className="team-carousel-wrapper">
           <div className="team-carousel">
             <div className="carousel-item">

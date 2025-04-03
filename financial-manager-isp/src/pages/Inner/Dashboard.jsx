@@ -38,10 +38,11 @@ const Dashboard = () => {
     return (
         <>
             <main>
-              <section className="hero-animation">
+              <section className="hero-animation dashheader">
                   <h2>Welcome back, {username ? username : 'user'}</h2>
                   <p>Smart tracking, powerful insights, financial freedom.</p>
               </section>
+              
                 <div className="dashboard">
                     <div className="welcome-card">Pfffppsoofpf</div>
                     
@@ -64,8 +65,13 @@ const Dashboard = () => {
                         <button>Stocks</button>
                         <button>Credit</button>
                         </div>
-                        <div className="header">Your Accounts</div>
-                        <div className="menu-text">[Placeholder text]</div>
+                        <div className="miniheader">Your Accounts</div>
+                        <div className="accountscontainer">
+                          <div className="menu-text">Primary Checking</div>
+                          <div className="header">$20,500.50</div>
+                          <div className="menu-text">Primary Saving</div>
+                          <div className="header">$100,500.50</div>
+                        </div>
                     </div>
                     
                     <div className="quick-links">
