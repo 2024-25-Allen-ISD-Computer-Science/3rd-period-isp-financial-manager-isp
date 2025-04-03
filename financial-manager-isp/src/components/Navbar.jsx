@@ -2,6 +2,21 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/navstyle.css';
 
+document.querySelectorAll('.scroll-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('data-target');
+        const targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+            window.scrollTo({
+                top: targetSection.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
 const Navbar = ({inner, user, signUpClick, logInClick}) => {
     const [navOpen, setNavOpen] = useState(false);
 
@@ -18,16 +33,16 @@ const Navbar = ({inner, user, signUpClick, logInClick}) => {
                             {!inner && 
                             <ul>
                                 <li>
-                                    <Link to="/">Home</Link>
+                                    <Link class="scroll-link" data-target="HOME">Home</Link>
                                 </li>
                                 <li>
-                                    <Link to="/about">About Us</Link>
+                                    <Link class="scroll-link" data-target="ABOUT">About Us</Link>
                                 </li>
                                 <li>
-                                    <Link to="/faq">FAQ</Link>
+                                    <Link class="scroll-link" data-target="FAQ">FAQ</Link>
                                 </li>
                                 <li>
-                                    <Link to="/contact">Contact</Link>
+                                    <Link class="scroll-link" data-target="CONTACT">Contact</Link>
                                 </li>
                             </ul>
                             }

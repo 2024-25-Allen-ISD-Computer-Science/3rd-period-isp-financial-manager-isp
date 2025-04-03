@@ -4,6 +4,22 @@ import '../css/indexstyle.css';
 const Home = () => {
   const animate = useRef(null);
 
+
+  document.querySelectorAll('.scroll-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('data-target');
+        const targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+            window.scrollTo({
+                top: targetSection.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
   // FAQ Toggle Logic inside useEffect
   useEffect(() => {
     const faqQuestions = document.querySelectorAll(".faq-question");
@@ -70,6 +86,7 @@ const Home = () => {
   return (
     <>
       <main>
+      <section id="HOME">
         <div id="splash-wrapper">
           <div id="splash">
             <div id="splashcontainer">
@@ -78,7 +95,7 @@ const Home = () => {
             </div>
           </div>
           <div id="splash-image">
-            <img src="https://raw.githubusercontent.com/2024-25-Allen-ISD-Computer-Science/3rd-period-isp-financial-manager-isp/refs/heads/main/public/accessiblefiles/FPXqiSR%20-%20Imgur.gif" />
+            <img height="400" width="800" src="https://raw.githubusercontent.com/2024-25-Allen-ISD-Computer-Science/3rd-period-isp-financial-manager-isp/860e00501860032b2c363b6a567f8c6e3fe7d85f/financial-manager-isp/public/FPXqiSR%20-%20Imgur.gif" />
           </div>
         </div>
 
@@ -93,7 +110,9 @@ const Home = () => {
             </span>
           </div>
         </div>
+        </section>
 
+        <section id="FAQ">
         <div ref={animate}>
           <h2>Frequently Asked Questions</h2>
         </div>
@@ -164,6 +183,14 @@ const Home = () => {
           <h2>Meet The Team</h2>
         </div>
 
+        <div ref={animate}>
+          <h2>Meet The Team</h2>
+        </div>
+
+        </section>
+
+
+        <section id="ABOUT">
         <div className="team-carousel-wrapper">
           <div className="team-carousel">
             <div className="carousel-item">
@@ -203,9 +230,11 @@ const Home = () => {
             </div>
           </div>
         </div>
-
+        </section>
         <div className="fill-partway imgdesc"></div>
 
+
+        <section id="CONTACT"></section>
         <footer class="footer">
             <div class="footer-content">
                 <p>@FinancialManager</p>
