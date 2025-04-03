@@ -280,7 +280,7 @@ footer {
 }
 
 .onboarding-card button {
-    background-color: #4CAF50;
+    background-color: rgb(37,99,235);
     color: white;
     padding: 10px 15px;
     border: none;
@@ -328,5 +328,5 @@ footer {
 }
 
 .dot.active {
-    background-color: #4CAF50;
+    background-color: rgb(37,99,235);
 }

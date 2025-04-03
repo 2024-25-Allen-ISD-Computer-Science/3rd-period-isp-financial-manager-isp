@@ -74,7 +74,7 @@ const Onboarding = () => {
                 linesOfCredit: [...userData.linesOfCredit, { name: lineName, balance: parsedBalance, apr: parsedApr }],
             });
         } else {
-            alert("Invalid balance or APR input. Please enter valid numbers.");
+            alert("please god enter real numbers");
         }
     };
 

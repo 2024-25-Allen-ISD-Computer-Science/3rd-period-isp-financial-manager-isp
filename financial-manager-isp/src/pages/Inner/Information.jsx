@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Navbar from '../../components/Navbar.jsx';
 import '../../css/InteractiveContentCards.css';
 
 const cardsData = [
@@ -35,7 +34,6 @@ const cardsData = [
   
     return (
       <>
-        <Navbar />
         <div className="grid-container">
           {cardsData.map((card) => (
             <div key={card.id} className="card" onClick={() => openCard(card)}>
