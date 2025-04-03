@@ -201,6 +201,12 @@ const Home = () => {
         </div>
 
         <div className="fill-partway imgdesc"></div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>@FinancialManager</p>
+            </div>
+        </footer>
       </main>
     </>
   );
