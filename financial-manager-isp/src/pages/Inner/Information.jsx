@@ -131,7 +131,7 @@ const Information = () => {
                       <li>Diversify your investments.</li>
                     </ul>
                     <a
-                      href="https://www.investopedia.com/retirement/"
+                      href="#"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="cta-button"
