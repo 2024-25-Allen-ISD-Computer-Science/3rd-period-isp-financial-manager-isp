@@ -1,24 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/navstyle.css';
 
-document.querySelectorAll('.scroll-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('data-target');
-        const targetSection = document.getElementById(targetId);
-
-        if (targetSection) {
-            window.scrollTo({
-                top: targetSection.offsetTop,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
 const Navbar = ({inner, user, signUpClick, logInClick}) => {
     const [navOpen, setNavOpen] = useState(false);
+
+    useEffect(() => {
+        const handleScrollLinkClick = (e) => {
+            const link = e.target.closest('.scroll-link');
+            if (!link) return;
+
+            e.preventDefault();
+            const targetId = link.getAttribute('data-target');
+            const targetSection = document.getElementById(targetId);
+
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+
+        };
+
+        document.addEventListener('click', handleScrollLinkClick);
+
+        return () => {
+            document.removeEventListener('click', handleScrollLinkClick);
+        };
+    }, []);
 
     return (
         <>
@@ -33,25 +43,23 @@ const Navbar = ({inner, user, signUpClick, logInClick}) => {
                             {!inner && 
                             <ul>
                                 <li>
-                                    <Link class="scroll-link" data-target="HOME">Home</Link>
+                                    <Link className="scroll-link" data-target="HOME">Home</Link>
                                 </li>
                                 <li>
-                                    <Link class="scroll-link" data-target="ABOUT">About Us</Link>
+                                    <Link className="scroll-link" data-target="ABOUT">About Us</Link>
                                 </li>
                                 <li>
-                                    <Link class="scroll-link" data-target="FAQ">FAQ</Link>
+                                    <Link className="scroll-link" data-target="FAQ">FAQ</Link>
                                 </li>
                                 <li>
-                                    <Link class="scroll-link" data-target="CONTACT">Contact</Link>
+                                    <Link className="scroll-link" data-target="CONTACT">Contact</Link>
                                 </li>
                             </ul>
                             }
                             <div className="auth-buttons">
                                 {!inner &&
                                     <>
-                                        <button onClick={signUpClick} className="filled-button">
-                                            Sign Up
-                                        </button>
+                                        <button onClick={signUpClick} className="filled-button">Sign Up</button>
                                         <button onClick={logInClick}>Log In</button>
                                     </>
                                 }

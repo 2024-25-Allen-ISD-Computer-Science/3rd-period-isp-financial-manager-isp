@@ -1,8 +1,11 @@
 import React, { useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { supabase } from '../lib/supabase.jsx'
 import '../css/userauthspecialstyles.css'
 
 const SignUp = ({closeSignUp, loginRedirect}) => {
+
+    const navigate = useNavigate();
 
     const [username, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -103,14 +106,26 @@ const SignUp = ({closeSignUp, loginRedirect}) => {
           }
         }
 
-        setError(false);
-        setErrorMessages([]);
-        setSubmitted(true);
+        const { datatuah, error } = await supabase.auth.signInWithPassword({
+            email: email,
+            password: password,
+        });
 
-        setTimeout(() => {
+        if (error) {
+            setError(true);
+            errors.push({id: 'authfail', message: error.message});
             setIsSubmitting(false);
-            loginRedirect();
-        }, 1000);
+        } else {
+            setTimeout(() => {
+                setIsSubmitting(false);
+                setError(false);
+                setErrorMessages([]);
+                setSubmitted(true);
+                closeSignUp();
+                navigate('/Inner/Onboarding'); 
+            }, 1000);
+        }
+
     };
 
     const HellYes = () => {
@@ -143,7 +158,7 @@ const SignUp = ({closeSignUp, loginRedirect}) => {
 
     return (
         <>
-            <div id="signUpOverlay" className="overlay">
+            <div id="signUpOverlay" className="loginoverlay">
                 <div className="overlay-content">
                     <button id="closeSignUpBtn" className="close-btn" onClick={closeSignUp}>X</button>
             

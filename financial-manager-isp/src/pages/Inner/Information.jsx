@@ -5,17 +5,17 @@ const cardsData = [
   {
     id: 1,
     title: 'Retirement Account',
-    imageUrl: 'https://via.placeholder.com/1200x400?text=Web+Dev+Banner',
+    imageUrl: '../../public/boy.jpg',
   },
   {
     id: 2,
     title: 'Yap Yap',
-    imageUrl: 'https://via.placeholder.com/1200x400?text=Design+Banner',
+    imageUrl: '../../public/boy.jpg',
   },
   {
     id: 3,
     title: 'Yippity Yap',
-    imageUrl: 'https://via.placeholder.com/1200x400?text=Tech+Banner',
+    imageUrl: '../../public/boy.jpg',
   },
 ];
 

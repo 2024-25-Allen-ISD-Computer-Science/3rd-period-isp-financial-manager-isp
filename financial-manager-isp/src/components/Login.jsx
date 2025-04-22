@@ -57,7 +57,7 @@ const Login = ({closeLogIn, loginComplete}) => {
 
     return (
         <>
-            <div id="logInOverlay" className="overlay">
+            <div id="logInOverlay" className="loginoverlay">
                 <div className="overlay-content">
                     <button id="closeLogInBtn" className="close-btn" onClick={closeLogIn}>X</button>
                     <h3>Log In</h3>

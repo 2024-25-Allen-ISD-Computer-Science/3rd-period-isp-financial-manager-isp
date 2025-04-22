@@ -4,22 +4,6 @@ import '../css/indexstyle.css';
 const Home = () => {
   const animate = useRef(null);
 
-
-  document.querySelectorAll('.scroll-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('data-target');
-        const targetSection = document.getElementById(targetId);
-
-        if (targetSection) {
-            window.scrollTo({
-                top: targetSection.offsetTop,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
   // FAQ Toggle Logic inside useEffect
   useEffect(() => {
     const faqQuestions = document.querySelectorAll(".faq-question");
@@ -112,10 +96,11 @@ const Home = () => {
         </div>
         </section>
 
-        <section id="FAQ">
         <div ref={animate}>
           <h2>Frequently Asked Questions</h2>
         </div>
+
+        <section id="FAQ">
 
         <div className="faq-container">
           <div className="faq-item">
@@ -183,10 +168,6 @@ const Home = () => {
           <h2>Meet The Team</h2>
         </div>
 
-        <div ref={animate}>
-          <h2>Meet The Team</h2>
-        </div>
-
         </section>
 
 
@@ -194,35 +175,35 @@ const Home = () => {
         <div className="team-carousel-wrapper">
           <div className="team-carousel">
             <div className="carousel-item">
-                <img src="https://via.placeholder.com/200" alt="Joseph Baril" />
+                <img src="../public/boy.jpg" alt="Joseph Baril" />
                 <div className="carousel-info">
                   <h3>Joseph Baril</h3>
                   <p>Backend Developer</p>
                 </div>
               </div>
             <div className="carousel-item">
-                <img src="https://via.placeholder.com/200" alt="Nathan Charles" />
+                <img src="../public/boy.jpg" alt="Nathan Charles" />
                 <div className="carousel-info">
                   <h3>Nathan Charles</h3>
                   <p>Full-Stack Developer</p>
                 </div>
               </div>
             <div className="carousel-item">
-              <img src="https://via.placeholder.com/200" alt="David Kwon" />
+              <img src="../public/boy.jpg" alt="David Kwon" />
               <div className="carousel-info">
                 <h3>David Kwon</h3>
                 <p>Front-End Developer</p>
               </div>
             </div>
               <div className="carousel-item">
-                <img src="https://via.placeholder.com/200" alt="Thomas Roney" />
+                <img src="../public/boy.jpg" alt="Thomas Roney" />
                 <div className="carousel-info">
                   <h3>Thomas Roney</h3>
                   <p>Project Manager</p>
                 </div>
               </div>
             <div className="carousel-item">
-              <img src="https://via.placeholder.com/200" alt="Maci Siratt" />
+              <img src="../public/boy.jpg" alt="Maci Siratt" />
               <div className="carousel-info">
                 <h3>Maci Siratt</h3>
                 <p>Main Website Designer</p>
@@ -235,8 +216,8 @@ const Home = () => {
 
 
         <section id="CONTACT"></section>
-        <footer class="footer">
-            <div class="footer-content">
+        <footer className="footer">
+            <div className="footer-content">
                 <p>@FinancialManager</p>
             </div>
         </footer>
